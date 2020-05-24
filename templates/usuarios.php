@@ -63,7 +63,7 @@
           <!-- Navegacion Pages START -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Dashboard | Vs_Arena</a></li>
+              <li class="breadcrumb-item"><a href="./usuarios.php">Dashboard | Vs_Arena</a></li>
               <li class="breadcrumb-item active">Usuarios</li>
             </ol>
           </div>
@@ -292,7 +292,8 @@
               <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Enviar Email</button>
               </div>
-                <!-- Card Submit END -->
+              <!-- Card Submit END -->
+              
             </form>
           </div>
         </div>
