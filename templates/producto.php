@@ -63,8 +63,8 @@
           <!-- Navegacion Pages START -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Dashboard | VsArena</a></li>
-              <li class="breadcrumb-item"><a href="#">Tienda</a></li>
+              <li class="breadcrumb-item"><a href="./usuarios.php">Dashboard | VsArena</a></li>
+              <li class="breadcrumb-item"><a href="./tienda.php">Tienda</a></li>
               <li class="breadcrumb-item active">{Producto}</li>
             </ol>
           </div>
@@ -278,9 +278,9 @@
 
                   <!-- Input Contraseña START -->
                   <div class="form-group row">
-                    <label for="inputPassword3" class="col-4">Password</label>
+                    <label for="inputPassword3" class="col-4">Contraseña</label>
                     <div class="col-8">
-                      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                      <input type="password" class="form-control" id="inputPassword3" placeholder="Contraseña">
                     </div>
                   </div>
                   <!-- Input Contraseña END -->

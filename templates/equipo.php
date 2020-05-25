@@ -63,7 +63,7 @@
           <!-- Navegacion Pages START -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Dashboard | VsArena</a></li>
+              <li class="breadcrumb-item"><a href="./usuarios.php">Dashboard | VsArena</a></li>
               <li class="breadcrumb-item active">{Nombre Equipo}</li>
             </ol>
           </div>
@@ -106,7 +106,7 @@
                   <!-- Cabecera Tabla Equipos START -->
                   <thead>
                   <tr>
-                    <th>ID</th>
+                    <th>ID-Usuario</th>
                     <th>Usuario</th>
                     <th>Email</th>
                   </tr>
@@ -181,7 +181,7 @@
                   <!-- Cabecera Tabla Ventas START -->
                   <thead>
                   <tr>
-                    <th>ID</th>
+                    <th>ID-Torneo</th>
                     <th>Nombre Torneo</th>
                     <th>Juego</th>
                     <th>Cantidad de Participantes</th>
@@ -190,7 +190,7 @@
                   </tr>
                   </thead>
                   <!-- Cabecera Tabla Ventas END -->
-
+                  
                   <!-- Contenido Ventas START -->
                   <tbody>
                   <tr>

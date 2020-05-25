@@ -63,7 +63,7 @@
           <!-- Navegacion Pages START -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Dashboard Vs_Arena</a></li>
+              <li class="breadcrumb-item"><a href="./usuarios.php">Dashboard Vs_Arena</a></li>
               <li class="breadcrumb-item active">Juegos</li>
             </ol>
           </div>
@@ -121,7 +121,7 @@
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>ID</th>
+                    <th>ID-Juego</th>
                     <th>Juego</th>
                     <th>Plataforma</th>
                     <th>Eliminar</th>
@@ -231,7 +231,7 @@
                   <!-- Detalles Juego START -->
                   <div class="form-group col-6">
                     <label>Detalles Juego</label>
-                    <textarea class="form-control" rows="3" placeholder="Escriba ..."></textarea>
+                    <textarea class="form-control" rows="3" placeholder="Detalles Juego ..."></textarea>
                   </div>
                   <!-- Detalles Juego END -->
 

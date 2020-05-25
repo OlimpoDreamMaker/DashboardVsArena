@@ -63,10 +63,10 @@
           <!-- Navegacion Pages START -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Dashboard | Vs_Arena</a></li>
-              <li class="breadcrumb-item"><a href="#">Torneos</a></li>
-              <li class="breadcrumb-item"><a href="#">{NombreTorneo}</a></li>
-              <li class="breadcrumb-item active">{NombrePremio}</li>
+              <li class="breadcrumb-item"><a href="./usuarios.php">Dashboard | Vs_Arena</a></li>
+              <li class="breadcrumb-item"><a href="./torneos.php">Torneos</a></li>
+              <li class="breadcrumb-item"><a href="./torneo.php">{Torneo}</a></li>
+              <li class="breadcrumb-item active">{Premio}</li>
             </ol>
           </div>
           <!-- Navegacion Pages END -->
@@ -83,7 +83,7 @@
         <!--Subtitulo START-->
         <div class="row mb-4">
           <div class="col-12">
-            <h2 class="m-0 text-dark">Informacion {Nombre Torneo} - {Nombre Premio}</h2>
+            <h2 class="m-0 text-dark">Informacion {Torneo} - {Premio}</h2>
           </div>
         </div>
         <!--Subtitulo END-->
@@ -235,9 +235,9 @@
 
                   <!-- Input Contraseña START -->
                   <div class="form-group row">
-                    <label for="inputPassword3" class="col-4">Password</label>
+                    <label for="inputPassword3" class="col-4">Contraseña</label>
                     <div class="col-8">
-                      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                      <input type="password" class="form-control" id="inputPassword3" placeholder="Contraseña">
                     </div>
                   </div>
                   <!-- Input Usuario END -->

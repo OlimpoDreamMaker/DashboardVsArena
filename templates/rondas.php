@@ -63,10 +63,10 @@
           <!-- Navegacion Pages START -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Dashboard | Vs_Arena</a></li>
-              <li class="breadcrumb-item"><a href="#">Torneos</a></li>
-              <li class="breadcrumb-item"><a href="#">{Nombre Torneo}</a></li>
-              <li class="breadcrumb-item active">Rondas</li>
+              <li class="breadcrumb-item"><a href="./usuarios.php">Dashboard | Vs_Arena</a></li>
+              <li class="breadcrumb-item"><a href="./torneos.php">Torneos</a></li>
+              <li class="breadcrumb-item"><a href="./torneo.php">{Torneo}</a></li>
+              <li class="breadcrumb-item active">{Ronda}</li>
             </ol>
           </div>
           <!-- Navegacion Pages END -->
@@ -83,7 +83,7 @@
         <!--Subtitulo START-->
         <div class="row mb-4">
           <div class="col-12">
-            <h2 class="m-0 text-dark">Informacion {Nombre Torneo} - {Nombre Ronda}</h2>
+            <h2 class="m-0 text-dark">Informacion {Torneo} - {Ronda}</h2>
           </div>
         </div>
         <!--Subtitulo END-->
@@ -96,7 +96,7 @@
 
               <!-- Card Header START -->
               <div class="card-header">
-                <h3 class="card-title"><a href="#">{Nombre Ronda}</a></h3>
+                <h3 class="card-title">{Nombre Ronda}</h3>
               </div>
               <!-- Card Header END -->
               
@@ -118,50 +118,50 @@
                   <!-- Contenido Tabla Ronda START -->
                   <tbody>
                   <tr>
-                    <td><a href="#">LLuvia Inesperada</a></td>
-                    <td><a href="#">Fuego Rapido</a></td>
+                    <td><a href="./equipo.php">LLuvia Inesperada</a></td>
+                    <td><a href="./equipo.php">Fuego Rapido</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Mar sin Agua</a></td>
-                    <td><a href="#">Las Estrellas</a></td>
+                    <td><a href="./equipo.php">Mar sin Agua</a></td>
+                    <td><a href="./equipo.php">Las Estrellas</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Lluvia Eterna</a></td>
-                    <td><a href="#">Nube Negra</a></td>
+                    <td><a href="./equipo.php">Lluvia Eterna</a></td>
+                    <td><a href="./equipo.php">Nube Negra</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Mente en Llamas</a></td>
-                    <td><a href="#">Sol Naciente</a></td>
+                    <td><a href="./equipo.php">Mente en Llamas</a></td>
+                    <td><a href="./equipo.php">Sol Naciente</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Manda Artica</a></td>
-                    <td><a href="#">Frio Quemador</a></td>
+                    <td><a href="./equipo.php">Manda Artica</a></td>
+                    <td><a href="./equipo.php">Frio Quemador</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Lluvia Eterna</a></td>
-                    <td><a href="#">Nube Negra</a></td>
+                    <td><a href="./equipo.php">Lluvia Eterna</a></td>
+                    <td><a href="./equipo.php">Nube Negra</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Mente en Llamas</a></td>
-                    <td><a href="#">Sol Naciente</a></td>
+                    <td><a href="./equipo.php">Mente en Llamas</a></td>
+                    <td><a href="./equipo.php">Sol Naciente</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Manda Artica</a></td>
-                    <td><a href="#">Frio Quemador</a></td>
+                    <td><a href="./equipo.php">Manda Artica</a></td>
+                    <td><a href="./equipo.php">Frio Quemador</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
@@ -178,7 +178,7 @@
 
           <!-- Subtitulo START -->
           <div class="col-12">
-            <h2 class="m-0 mb-4 text-dark">Equipos inscriptos al torneo - {Nombre Torneo}</h2>
+            <h2 class="m-0 mb-4 text-dark">Equipos inscriptos al torneo - {Torneo}</h2>
           </div>
           <!-- Subtitulo END -->
 
@@ -199,7 +199,7 @@
                   <!-- Cabecera Tabla Equipos START -->
                   <thead>
                   <tr>
-                    <th>ID</th>
+                    <th>ID-Equipo</th>
                     <th>Equipo</th>
                     <th>Eliminar equipo de la Ronda</th>
                   </tr>
@@ -209,28 +209,28 @@
                   <!-- Contenido Tabla Equipos START -->
                   <tbody>
                   <tr>
-                    <td>256</td>
-                    <td><a href="#">Fuego Rapido</a></td>
+                    <td><a href="./equipo.php">256</a></td>
+                    <td><a href="./equipo.php">Fuego Rapido</a></td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>206</td>
-                    <td><a href="#">Las Estrellas</a></td>
+                    <td><a href="./equipo.php">206</a></td>
+                    <td><a href="./equipo.php">Las Estrellas</a></td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>056</td>
-                    <td><a href="#">Nube Negra</a></td>
+                    <td><a href="./equipo.php">056</a></td>
+                    <td><a href="./equipo.php">Nube Negra</a></td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>060</td>
-                    <td><a href="#">Sol Naciente</a></td>
+                    <td><a href="./equipo.php">060</a></td>
+                    <td><a href="./equipo.php">Sol Naciente</a></td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>125</td>
-                    <td><a href="#">Frio Quemador</a></td>
+                    <td><a href="./equipo.php">125</a></td>
+                    <td><a href="./equipo.php">Frio Quemador</a></td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   </tbody>
@@ -786,12 +786,12 @@
 
                   <!-- Input Contraseña START -->
                   <div class="form-group row">
-                    <label for="inputPassword3" class="col-4">Password</label>
+                    <label for="inputPassword3" class="col-4">Contraseña</label>
                     <div class="col-8">
-                      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                      <input type="password" class="form-control" id="inputPassword3" placeholder="Contraseña">
                     </div>
                   </div>
-                  <!-- Input Usuario END -->
+                  <!-- Input Contraseña END -->
 
                 </div>
                 <!-- Input Usuario END -->

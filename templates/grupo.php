@@ -63,9 +63,9 @@
           <!-- Navegacion Pages START -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Dashboard | VsArena</a></li>
-              <li class="breadcrumb-item"><a href="#">Torneos</a></li>
-              <li class="breadcrumb-item"><a href="#">{Nombre Torneo}</a></li>
+              <li class="breadcrumb-item"><a href="./usuarios.php">Dashboard | VsArena</a></li>
+              <li class="breadcrumb-item"><a href="./torneos.php">Torneos</a></li>
+              <li class="breadcrumb-item"><a href="./torneo.php">{Nombre Torneo}</a></li>
               <li class="breadcrumb-item active">{Grupo}</li>
             </ol>
           </div>
@@ -108,7 +108,7 @@
                   <!-- Cabecera Tabla Torneo START -->
                   <thead>
                   <tr>
-                    <th>ID</th>
+                    <th>ID-Torneo</th>
                     <th>Juego</th>
                     <th>Cantidad permitida de Participantes</th>
                     <th>Fase de Grupos</th>
@@ -123,10 +123,10 @@
                   <tbody>
                   <tr>
                     <td>256</td>
-                    <td><a href="#">LOL</a></td>
+                    <td><a href="./juego.php">LOL</a></td>
                     <td>40</td>
                     <td>SI</td>
-                    <td><a href="#">Ver Premios</a></td>
+                    <td><a href="./premio.php">Ver Premios</a></td>
                     <td>5 vs 5</td>
                     <td>A la espera</td>
                   </tr>
@@ -168,57 +168,57 @@
               <div class="card-body p-0">
                 <table class="table table-striped">
                   
-                  <!-- Cabecera Tabla Torneo START -->
+                  <!-- Cabecera Tabla Grupo START -->
                   <thead>
                   <tr>
-                    <th>ID</th>
+                    <th>ID-Equipo</th>
                     <th>Equipo</th>
                     <th>Puntos</th>
                     <th>Resultado</th>
                     <th>Descalificar</th>
                   </tr>
                   </thead>
-                  <!-- Cabecera Tabla Torneo END -->
+                  <!-- Cabecera Tabla Grupo END -->
                   
-                  <!-- Contenido Tabla Torneo START -->
+                  <!-- Contenido Tabla Grupo START -->
                   <tbody>
                   <tr>
-                    <td>256</td>
-                    <td><a href="#">Fuego Rapido</a></td>
+                    <td><a href="./juego.php">256</a></td>
+                    <td><a href="./juego.php">Fuego Rapido</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>206</td>
-                    <td><a href="#">Las Estrellas</a></td>
+                    <td><a href="./juego.php">206</a></td>
+                    <td><a href="./juego.php">Las Estrellas</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>056</td>
-                    <td><a href="#">Nube Negra</a></td>
+                    <td><a href="./juego.php">056</a></td>
+                    <td><a href="./juego.php">Nube Negra</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>060</td>
-                    <td><a href="#">Sol Naciente</a></td>
+                    <td><a href="./juego.php">060</a></td>
+                    <td><a href="./juego.php">Sol Naciente</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>125</td>
-                    <td><a href="#">Frio Quemador</a></td>
+                    <td><a href="./juego.php">125</a></td>
+                    <td><a href="./juego.php">Frio Quemador</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   </tbody>
-                  <!-- Cabecera Tabla Torneo END -->
+                  <!-- Cabecera Tabla Grupo END -->
 
                 </table>
               </div>
@@ -247,7 +247,7 @@
                   <!-- Cabecera Tabla Equipos START -->
                   <thead>
                   <tr>
-                    <th>ID</th>
+                    <th>ID-Equipo</th>
                     <th>Equipo</th>
                     <th>Agregar al Grupo</th>
                   </tr>
@@ -257,28 +257,28 @@
                   <!-- Contenido Tabla Equipos START -->
                   <tbody>
                   <tr>
-                    <td>256</td>
-                    <td><a href="#">Fuego Rapido</a></td>
+                    <td><a href="./equipo.php">256</a></td>
+                    <td><a href="./equipo.php">Fuego Rapido</a></td>
                     <td><a href="#"><i class="fas fa-plus"></i></a></td>
                   </tr>
                   <tr>
-                    <td>206</td>
-                    <td><a href="#">Las Estrellas</a></td>
+                    <td><a href="./equipo.php">206</a></td>
+                    <td><a href="./equipo.php">Las Estrellas</a></td>
                     <td><a href="#"><i class="fas fa-plus"></i></a></td>
                   </tr>
                   <tr>
-                    <td>056</td>
-                    <td><a href="#">Nube Negra</a></td>
+                    <td><a href="./equipo.php">056</a></td>
+                    <td><a href="./equipo.php">Nube Negra</a></td>
                     <td><a href="#"><i class="fas fa-plus"></i></a></td>
                   </tr>
                   <tr>
-                    <td>060</td>
-                    <td><a href="#">Sol Naciente</a></td>
+                    <td><a href="./equipo.php">060</a></td>
+                    <td><a href="./equipo.php">Sol Naciente</a></td>
                     <td><a href="#"><i class="fas fa-plus"></i></a></td>
                   </tr>
                   <tr>
-                    <td>125</td>
-                    <td><a href="#">Frio Quemador</a></td>
+                    <td><a href="./equipo.php">125</a></td>
+                    <td><a href="./equipo.php">Frio Quemador</a></td>
                     <td><a href="#"><i class="fas fa-plus"></i></a></td>
                   </tr>
                   </tbody>
@@ -328,62 +328,62 @@
                   <!-- Contenido Tabla Torneo START -->
                   <tbody>
                   <tr>
-                    <td><a href="#">Las Estrellas</a></td>
-                    <td><a href="#">Fuego Rapido</a></td>
+                    <td><a href="./equipo.php">Las Estrellas</a></td>
+                    <td><a href="./equipo.php">Fuego Rapido</a></td>
                     <td>16/04/20 18:00</td>
-                    <td>Victoria para <a href="#">Fuego Rapido</a></td>
+                    <td>Victoria para <a href="./equipo.php">Fuego Rapido</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">Las Estrellas</a></td>
-                    <td><a href="#">Nube Negra</a></td>
+                    <td><a href="./equipo.php">Las Estrellas</a></td>
+                    <td><a href="./equipo.php">Nube Negra</a></td>
                     <td>16/04/20 18:00</td>
-                    <td>Victoria para <a href="#">Las Estrellas</a></td>
+                    <td>Victoria para <a href="./equipo.php">Las Estrellas</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">Las Estrellas</a></td>
-                    <td><a href="#">Sol Naciente</a></td>
-                    <td>16/04/20 18:00</td>
-                    <td>Empate</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">Las Estrellas</a></td>
-                    <td><a href="#">Frio Quemador</a></td>
-                    <td>16/04/20 18:00</td>
-                    <td>Victoria para <a href="#">Las Estrellas</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">Sol Naciente</a></td>
-                    <td><a href="#">Frio Quemador</a></td>
-                    <td>16/04/20 18:00</td>
-                    <td>Victoria para <a href="#">Sol Naciente</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">Nube Negra</a></td>
-                    <td><a href="#">Frio Quemador</a></td>
+                    <td><a href="./equipo.php">Las Estrellas</a></td>
+                    <td><a href="./equipo.php">Sol Naciente</a></td>
                     <td>16/04/20 18:00</td>
                     <td>Empate</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Fuego Rapido</a></td>
-                    <td><a href="#">Frio Quemador</a></td>
+                    <td><a href="./equipo.php">Las Estrellas</a></td>
+                    <td><a href="./equipo.php">Frio Quemador</a></td>
                     <td>16/04/20 18:00</td>
-                    <td>Victoria para <a href="#">Frio Quemador</a></td>
+                    <td>Victoria para <a href="./equipo.php">Las Estrellas</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">Fuego Rapido</a></td>
-                    <td><a href="#">Nube Negra</a></td>
+                    <td><a href="./equipo.php">Sol Naciente</a></td>
+                    <td><a href="./equipo.php">Frio Quemador</a></td>
                     <td>16/04/20 18:00</td>
-                    <td>Victoria para <a href="#">Fuego Rapido</a></td>
+                    <td>Victoria para <a href="./equipo.php">Sol Naciente</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">Fuego Rapido</a></td>
-                    <td><a href="#">Sol Naciente</a></td>
+                    <td><a href="./equipo.php">Nube Negra</a></td>
+                    <td><a href="./equipo.php">Frio Quemador</a></td>
                     <td>16/04/20 18:00</td>
-                    <td>Victoria para <a href="#">Fuego Rapido</a></td>
+                    <td>Empate</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Nube Negra</a></td>
-                    <td><a href="#">Sol Naciente</a></td>
+                    <td><a href="./equipo.php">Fuego Rapido</a></td>
+                    <td><a href="./equipo.php">Frio Quemador</a></td>
+                    <td>16/04/20 18:00</td>
+                    <td>Victoria para <a href="./equipo.php">Frio Quemador</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="./equipo.php">Fuego Rapido</a></td>
+                    <td><a href="./equipo.php">Nube Negra</a></td>
+                    <td>16/04/20 18:00</td>
+                    <td>Victoria para <a href="./equipo.php">Fuego Rapido</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="./equipo.php">Fuego Rapido</a></td>
+                    <td><a href="./equipo.php">Sol Naciente</a></td>
+                    <td>16/04/20 18:00</td>
+                    <td>Victoria para <a href="./equipo.php">Fuego Rapido</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="./equipo.php">Nube Negra</a></td>
+                    <td><a href="./equipo.php">Sol Naciente</a></td>
                     <td>16/04/20 18:00</td>
                     <td>Empate</td>
                   </tr>
@@ -440,9 +440,9 @@
 
                   <!-- Input Contraseña START -->
                   <div class="form-group row">
-                    <label for="inputPassword3" class="col-4">Password</label>
+                    <label for="inputPassword3" class="col-4">Contraseña</label>
                     <div class="col-8">
-                      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                      <input type="password" class="form-control" id="inputPassword3" placeholder="Contraseña">
                     </div>
                   </div>
                   <!-- Input Contraseña END -->

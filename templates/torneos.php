@@ -63,7 +63,7 @@
           <!-- Navegacion Pages START -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Dashboard | Vs_Arena</a></li>
+              <li class="breadcrumb-item"><a href="./usuarios.php">Dashboard | Vs_Arena</a></li>
               <li class="breadcrumb-item active">Torneos</li>
             </ol>
           </div>
@@ -168,7 +168,7 @@
                   <!-- Cabecera Tabla Torneos START -->
                   <thead>
                   <tr>
-                    <th>ID</th>
+                    <th>ID-Torneo</th>
                     <th>Torneo</th>
                     <th>Juego</th>
                     <th>Cantidad de Participantes</th>
@@ -182,18 +182,18 @@
                   <!-- Contenido Tienda START -->
                   <tbody>
                   <tr>
-                    <td><a href="#">256</a></td>
-                    <td><a href="#">Champions League</a></td>
-                    <td><a href="#">LOL</a></td>
+                    <td><a href="./torneo.php">256</a></td>
+                    <td><a href="./torneo.php">Champions League</a></td>
+                    <td><a href="./juego.php">LOL</a></td>
                     <td>40</td>
                     <td>Concluido</td>
                     <td>5 vs 5</td>
                     <td>20/06/20 20:00 |<br/>| 26/06/20 22:00</td>
                   </tr>
                   <tr>
-                    <td><a href="#">115</a></td>
-                    <td><a href="#">Force Attack</a></td>
-                    <td><a href="#">CS:GO</a></td>
+                    <td><a href="./torneo.php">115</a></td>
+                    <td><a href="./torneo.php">Force Attack</a></td>
+                    <td><a href="./juego.php">CS:GO</a></td>
                     <td>24</td>
                     <td>Activo</td>
                     <td>3 vs 3</td>

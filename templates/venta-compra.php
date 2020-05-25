@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Vs_Arena Dashboard-Torneo</title>
+  <title>VsArena | Dashboard-Torneo</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -49,14 +49,14 @@
   <!-- Content Wrapper. Contains page content START-->
   <div class="content-wrapper">
 
-    <!-- Content Header (Page header) START -->
+    <!-- Content Header (Page header) START-->
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
 
           <!-- Titulo Page START -->
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Juego - {Nombre de Juego}</h1>
+            <h1 class="m-0 text-dark">Venta/Compra N°{idVentaCompra}</h1>
           </div>
           <!-- Titulo Page END -->
 
@@ -64,8 +64,8 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="./usuarios.php">Dashboard | VsArena</a></li>
-              <li class="breadcrumb-item"><a href="./juegos.php">Juegos</a></li>
-              <li class="breadcrumb-item active">{Juego}</li>
+              <li class="breadcrumb-item"><a href="./tienda.php">Tienda</a></li>
+              <li class="breadcrumb-item active">Venta/Compra N°{idVentaCompra}</li>
             </ol>
           </div>
           <!-- Navegacion Pages END -->
@@ -73,184 +73,118 @@
         </div>
       </div>
     </div>
-    <!-- Content Header (Page header) END -->
+    <!-- Content Header (Page header) END-->
 
-    <!-- Content START -->
+    <!--Content START-->
     <section class="content">
 
-      <!-- Fluid START -->
-      <div class="container-fluid">
-        
-        <!--Subtitulo START-->
-        <div class="row mb-4">
-          <div class="col-6">
-            <h2 class="m-0 text-dark">Informacion {Nombre de Juego}</h2>
-          </div>
-        </div>
-        <!--Subtitulo END-->
-
-        <!-- Small boxes (Stat box) START-->
-        <div class="row">
-
-          <!-- Box 1 START -->
-          <div class="col-lg-3 col-6">
-            <div class="small-box bg-primary">
-              <div class="inner">
-                <h3>30</h3>
-                <p>Torneos Realizados</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-trophy"></i>
-              </div>
-            </div>
-          </div>
-          <!-- Box 1 END -->
-
-        </div>
-        <!-- Small boxes (Stat box) START-->
-
-      </div>
-      <!-- Fluid END -->
-
-      <!-- Info Juego START -->
-      <div class="card card-solid">
-        <div class="card-body">
-          <div class="row">
-
-            <div class="col-12 col-sm-6">
-
-              <!-- Imagen Juego START -->
-              <div class="col-12">
-                <img src="../dist/img/default.png" class="product-image" alt="Product Image">
-              </div>
-              <!-- Imagen Juego END -->
-
-            </div>
-
-            <!-- Resumen Juego START -->
-            <div class="col-12 col-sm-6">
-              <h3 class="my-3">{Nombre Juego}</h3>
-              <p>{Descripcion Juego}</p>
-
-              <hr>
-
-            </div>
-            <!-- Resumen Juego END -->
-
-          </div>
-
-        </div>
-        <!-- /.card-body -->
-      </div>
-      <!-- Info Juego END -->
-
-      <!-- Fluid START -->
+      <!--Fluid START-->
       <div class="container-fluid">
 
         <!--Subtitulo START-->
         <div class="row mb-4">
           <div class="col-6">
-            <h2 class="m-0 text-dark">Acciones Juego - LOL</h2>
+            <h2 class="m-0 text-dark">Informacion Venta/Compra</h2>
           </div>
         </div>
         <!--Subtitulo END-->
-        
+
+        <!--Tablas START-->
         <div class="row">
 
-          <!-- Modificar Juego START -->
-          <div class="col-md-12">
-            <div class="card card-primary">
+          <!-- Tabla Productos START -->
+          <div class="col-12">
+            
+            <!-- Card START -->
+            <div class="card">
 
               <!-- Card Header START -->
               <div class="card-header">
-                <h3 class="card-title">Modificar - {Nombre de Juego}</h3>
+                <h3 class="card-title">Productos</h3>
               </div>
               <!-- Card Header END -->
-              
-              <!-- Form START -->
-              <form role="form">
 
-                <!-- Card Body START -->
-                <div class="row card-body">
+              <!-- Card Body START -->
+              <div class="card-body">
+                <table id="example2" class="table table-bordered table-hover">
 
-                  <!-- Input Nombre Juego START -->
-                  <div class="form-group col-6">
-                    <label for="exampleInputEmail1">Nombre Juego</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre Juego...">
-                  </div>
-                  <!-- Input Nombre Juego END -->
+                  <!-- Cabecera Tabla Productos START -->
+                  <thead>
+                  <tr>
+                    <th>ID-Productos</th>
+                    <th>Nombre Producto</th>
+                    <th>Precio p/unidad</th>
+                    <th>Cantidad</th>
+                    <th>Total Productos x Cantidad</th>
+                  </tr>
+                  </thead>
+                  <!-- Cabecera Tabla Productos END -->
 
-                  <!-- Input Plataforma START -->
-                  <div class="form-group col-6">
-                    <label>Plataforma</label>
-                    <select class="form-control">
-                      <option>PC</option>
-                      <option>PS3/4</option>
-                      <option>XBOX</option>
-                      <option>MOBILE</option>
-                      <option>TODAS LAS PLATAFORMAS</option>
-                    </select>
-                  </div>
-                  <!-- Input Plataforma END -->
+                  <!-- Contenido Productos START -->
+                  <tbody>
+                  <tr>
+                    <td><a href="./producto.php">256</a></td>
+                    <td><a href="./producto.php">Tazas LOL</a></td>
+                    <td>$20</td>
+                    <td>1</td>
+                    <td>$20</td>
+                  </tr>
+                  <tr>
+                    <td><a href="./producto.php">125</a></td>
+                    <td><a href="./producto.php">Gorra Fortnite</a></td>
+                    <td>$15</td>
+                    <td>4</td>
+                    <td>$60</td>
+                  </tr>
+                  <tr>
+                    <td><a href="./producto.php">056</a></td>
+                    <td><a href="./producto.php">Campera CS:G0</a></td>
+                    <td>$35</td>
+                    <td>2</td>
+                    <td>$70</td>
+                  </tr>
+                  </tbody>
+                  <!-- Contenido Productos END -->
 
-                  <!-- Input Portada Juego START -->
-                  <div class="form-group col-6">
-                    <label for="exampleInputFile">Cambiar Portada</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Elija el archivo</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text" id="">Subir</span>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Input Portada Juego END -->
-
-                  <!-- Input Detalles Juego START -->
-                  <div class="form-group col-6">
-                    <label>Detalles Juego</label>
-                    <textarea class="form-control" rows="3" placeholder="Detalles Juego..."></textarea>
-                  </div>
-                  <!-- Input Detalles Juego END -->
-
-                </div>
-                <!-- Card Body END -->
-
-                <!-- Submit START -->
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Modificar Juego</button>
-                </div>
-                <!-- Submit END -->
-
-              </form>
-              <!-- Form END -->
+                </table>
+              </div>
+              <!-- Card Body END -->
 
             </div>
-          </div>
-          <!-- Modificar Juego END -->
+            <!-- Card END -->
 
-          <!-- Eliminar Juego START -->
-          <div class="col-6">
+          </div>
+          <!-- Tabla Productos END -->
+
+        </div>
+        <!--Tablas END-->
+
+        <!--Subtitulo START-->
+        <div class="row mb-4">
+          <div class="col-12">
+            <h2 class="m-0 text-dark">Reembolsar Venta/Compra</h2>
+          </div>
+        </div>
+        <!--Subtitulo END-->
+
+        <!-- Eliminar Torneo START -->
+        <div class="col-6">
             <div class="card card-danger">
-
+              
               <!-- Card Header START -->
               <div class="card-header">
-                <h3 class="card-title">Eliminar Juego</h3>
+                <h3 class="card-title">Reembolsar Venta/Compra</h3>
               </div>
               <!-- Card Header END -->
 
-              <!-- Subtitulo START -->
-              <p class="m-2 text-dark">Ingrese su cuenta para eliminar el torneo</p>
-              <!-- Subtitulo END -->
+              <p class="m-2 text-dark">Ingrese su cuenta para reembolsar venta</p>
 
               <!-- Form START -->
               <form class="form-horizontal">
 
                 <!-- Card Body START -->
                 <div class="card-body">
-                  
+
                   <!-- Input Usuario START -->
                   <div class="form-group row">
                     <label for="inputEmail3" class="col-4">Cuenta</label>
@@ -262,9 +196,9 @@
 
                   <!-- Input Contraseña START -->
                   <div class="form-group row">
-                    <label for="inputPassword3" class="col-4">Password</label>
+                    <label for="inputPassword3" class="col-4">Contraseña</label>
                     <div class="col-8">
-                      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                      <input type="password" class="form-control" id="inputPassword3" placeholder="Contraseña">
                     </div>
                   </div>
                   <!-- Input Contraseña END -->
@@ -274,23 +208,21 @@
 
                 <!-- Submit START -->
                 <div class="card-footer d-flex justify-content-center">
-                  <button type="submit" class="btn btn-danger">Eliminar Juego</button>
+                  <button type="submit" class="btn btn-danger">Reembolsar Venta</button>
                 </div>
                 <!-- Submit END -->
 
               </form>
               <!-- Form END -->
-
             </div>
           </div>
-          <!-- Eliminar Juego END -->
-          
-        </div>
+          <!-- Eliminar Torneo END -->
+
       </div>
-      <!-- Fluid END -->
+      <!--Fluid END-->
 
     </section>
-    <!-- Content END -->
+    <!--Content END-->
 
   </div>
   <!-- Content Wrapper. Contains page content END-->
@@ -369,6 +301,15 @@
       "autoWidth": false,
     });
     $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+    $('#example3').DataTable({
       "paging": true,
       "lengthChange": false,
       "searching": false,

@@ -63,7 +63,7 @@
           <!-- Navegacion Pages START -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Dashboard | VsArena</a></li>
+              <li class="breadcrumb-item"><a href="./usuarios.php">Dashboard | VsArena</a></li>
               <li class="breadcrumb-item active">Tienda</li>
             </ol>
           </div>
@@ -172,8 +172,8 @@
                   <!-- Cabecera Tabla Productos START -->
                   <thead>
                   <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
+                    <th>ID-Productos</th>
+                    <th>Nombre Producto</th>
                     <th>Precio</th>
                     <th>Stock</th>
                   </tr>
@@ -244,21 +244,21 @@
                   <!-- Contenido Ventas START -->
                   <tbody>
                   <tr>
-                    <td><a href="./venta.php">256</a></td>
+                    <td><a href="./venta-compra.php">256</a></td>
                     <td><a href="./usuario.php">033</a></td>
-                    <td><a href="./venta.php">Ver Descripcion</a></td>
+                    <td><a href="./venta-compra.php">Ver Descripcion</a></td>
                     <td>$170</td>
                   </tr>
                   <tr>
-                    <td><a href="./venta.php">125</a></td>
+                    <td><a href="./venta-compra.php">125</a></td>
                     <td><a href="./usuario.php">703</a></td>
-                    <td><a href="./venta.php">Ver Descripcion</a></td>
+                    <td><a href="./venta-compra.php">Ver Descripcion</a></td>
                     <td>$70</td>
                   </tr>
                   <tr>
-                    <td><a href="./venta.php">012</a></td>
+                    <td><a href="./venta-compra.php">012</a></td>
                     <td><a href="./usuario.php">070</a></td>
-                    <td><a href="./venta.php">Ver Descripcion</a></td>
+                    <td><a href="./venta-compra.php">Ver Descripcion</a></td>
                     <td>$270</td>
                   </tr>
                   </tbody>

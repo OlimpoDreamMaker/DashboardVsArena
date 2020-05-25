@@ -56,16 +56,16 @@
 
           <!-- Titulo Page START -->
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Torneo Champions Legue</h1>
+            <h1 class="m-0 text-dark">Torneo {NombreTorneo}</h1>
           </div>
           <!-- Titulo Page END -->
 
           <!-- Navegacion Pages START -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Dashboard | VsArena</a></li>
-              <li class="breadcrumb-item"><a href="#">Torneos</a></li>
-              <li class="breadcrumb-item active">{Nombre Torneo}</li>
+              <li class="breadcrumb-item"><a href="./usuarios.php">Dashboard | VsArena</a></li>
+              <li class="breadcrumb-item"><a href="./torneos.php">Torneos</a></li>
+              <li class="breadcrumb-item active">{NombreTorneo}</li>
             </ol>
           </div>
           <!-- Navegacion Pages END -->
@@ -82,7 +82,7 @@
         <!--Subtitulo START-->
         <div class="row mb-4">
           <div class="col-6">
-            <h2 class="m-0 text-dark">Informacion ChampionsLegue</h2>
+            <h2 class="m-0 text-dark">Informacion {NombreTorneo}</h2>
           </div>
         </div>
         <!--Subtitulo END-->
@@ -104,11 +104,9 @@
             </div>
           </div>
           <div class="col-lg-3 col-6">
-            <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
                 <h3><i class="fas fa-coins"></i> s/Premios</h3>
-
                 <p>Premio</p>
               </div>
               <div class="icon">
@@ -122,7 +120,6 @@
             <div class="small-box bg-success">
               <div class="inner">
                 <h3>16/05-18:00</h3>
-
                 <p>Fecha de Inicio</p>
               </div>
               <div class="icon">
@@ -131,11 +128,9 @@
             </div>
           </div>
           <div class="col-lg-3 col-6">
-            <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
                 <h3>20/05-20:00</h3>
-
                 <p>Fecha de Fin</p>
               </div>
               <div class="icon">
@@ -167,11 +162,10 @@
                   <!-- Cabecera Tabla Torneo START -->
                   <thead>
                   <tr>
-                    <th>ID</th>
+                    <th>ID-Torneo</th>
                     <th>Juego</th>
                     <th>Cantidad permitida de Participantes</th>
                     <th>Fase de Grupos</th>
-                    <th>Premios</th>
                     <th>Modalidad</th>
                     <th>Estado</th>
                   </tr>
@@ -182,10 +176,9 @@
                   <tbody>
                   <tr>
                     <td>256</td>
-                    <td><a href="#">LOL</a></td>
+                    <td><a href="./juego.php">LOL</a></td>
                     <td>40</td>
                     <td>SI</td>
-                    <td><a href="#">Ver Premios</a></td>
                     <td>5 vs 5</td>
                     <td>A la espera</td>
                   </tr>
@@ -226,7 +219,7 @@
 
               <!-- Card Header START -->
               <div class="card-header">
-                <h3 class="card-title"><a href="#">{Nombre de Equipo}</a></h3>
+                <h3 class="card-title"><a href="./equipo.php">{Nombre de Equipo}</a></h3>
               </div>
               <!-- Card Header END -->
               
@@ -246,24 +239,24 @@
                   <!-- Contenido Tabla Ronda START -->
                   <tbody>
                   <tr>
-                    <td><a href="#">038</a></td>
-                    <td>Tornado323</td>
+                    <td><a href="./usuario.php">038</a></td>
+                    <td><a href="./usuario.php">Tornado323</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">127</a></td>
-                    <td>xxXBlackGladiatorXxx</td>
+                    <td><a href="./usuario.php">127</a></td>
+                    <td><a href="./usuario.php">xxXBlackGladiatorXxx</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">320</td>
-                    <td>Thor123</td>
+                    <td><a href="./usuario.php">320</td>
+                    <td><a href="./usuario.php">Thor123</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">415</a></td>
-                    <td>Zeus2mil</td>
+                    <td><a href="./usuario.php">415</a></td>
+                    <td><a href="./usuario.php">Zeus2mil</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">369</a></td>
-                    <td>BunnyFire</td>
+                    <td><a href="./usuario.php">369</a></td>
+                    <td><a href="./usuario.php">BunnyFire</a></td>
                   </tr>
                   </tbody>
                   <!-- Cabecera Tabla Ronda END -->
@@ -282,7 +275,7 @@
 
               <!-- Card Header START -->
               <div class="card-header">
-                <h3 class="card-title"><a href="#">{Nombre de Equipo}</a></h3>
+                <h3 class="card-title"><a href="./equipo.php">{Nombre de Equipo}</a></h3>
               </div>
               <!-- Card Header END -->
               
@@ -302,24 +295,24 @@
                   <!-- Contenido Tabla Ronda START -->
                   <tbody>
                   <tr>
-                    <td><a href="#">038</a></td>
-                    <td>Tornado323</td>
+                    <td><a href="./usuario.php">038</a></td>
+                    <td><a href="./usuario.php">Tornado323</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">127</a></td>
-                    <td>xxXBlackGladiatorXxx</td>
+                    <td><a href="./usuario.php">127</a></td>
+                    <td><a href="./usuario.php">xxXBlackGladiatorXxx</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">320</td>
-                    <td>Thor123</td>
+                    <td><a href="./usuario.php">320</td>
+                    <td><a href="./usuario.php">Thor123</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">415</a></td>
-                    <td>Zeus2mil</td>
+                    <td><a href="./usuario.php">415</a></td>
+                    <td><a href="./usuario.php">Zeus2mil</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">369</a></td>
-                    <td>BunnyFire</td>
+                    <td><a href="./usuario.php">369</a></td>
+                    <td><a href="./usuario.php">BunnyFire</a></td>
                   </tr>
                   </tbody>
                   <!-- Cabecera Tabla Ronda END -->
@@ -338,7 +331,7 @@
 
               <!-- Card Header START -->
               <div class="card-header">
-                <h3 class="card-title"><a href="#">{Nombre de Equipo}</a></h3>
+                <h3 class="card-title"><a href="./equipo.php">{Nombre de Equipo}</a></h3>
               </div>
               <!-- Card Header END -->
               
@@ -358,24 +351,24 @@
                   <!-- Contenido Tabla Ronda START -->
                   <tbody>
                   <tr>
-                    <td><a href="#">038</a></td>
-                    <td>Tornado323</td>
+                    <td><a href="./usuario.php">038</a></td>
+                    <td><a href="./usuario.php">Tornado323</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">127</a></td>
-                    <td>xxXBlackGladiatorXxx</td>
+                    <td><a href="./usuario.php">127</a></td>
+                    <td><a href="./usuario.php">xxXBlackGladiatorXxx</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">320</td>
-                    <td>Thor123</td>
+                    <td><a href="./usuario.php">320</td>
+                    <td><a href="./usuario.php">Thor123</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">415</a></td>
-                    <td>Zeus2mil</td>
+                    <td><a href="./usuario.php">415</a></td>
+                    <td><a href="./usuario.php">Zeus2mil</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">369</a></td>
-                    <td>BunnyFire</td>
+                    <td><a href="./usuario.php">369</a></td>
+                    <td><a href="./usuario.php">BunnyFire</a></td>
                   </tr>
                   </tbody>
                   <!-- Cabecera Tabla Ronda END -->
@@ -394,7 +387,7 @@
 
               <!-- Card Header START -->
               <div class="card-header">
-                <h3 class="card-title"><a href="#">{Nombre de Equipo}</a></h3>
+                <h3 class="card-title"><a href="./equipo.php">{Nombre de Equipo}</a></h3>
               </div>
               <!-- Card Header END -->
               
@@ -414,24 +407,24 @@
                   <!-- Contenido Tabla Ronda START -->
                   <tbody>
                   <tr>
-                    <td><a href="#">038</a></td>
-                    <td>Tornado323</td>
+                    <td><a href="./usuario.php">038</a></td>
+                    <td><a href="./usuario.php">Tornado323</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">127</a></td>
-                    <td>xxXBlackGladiatorXxx</td>
+                    <td><a href="./usuario.php">127</a></td>
+                    <td><a href="./usuario.php">xxXBlackGladiatorXxx</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">320</td>
-                    <td>Thor123</td>
+                    <td><a href="./usuario.php">320</td>
+                    <td><a href="./usuario.php">Thor123</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">415</a></td>
-                    <td>Zeus2mil</td>
+                    <td><a href="./usuario.php">415</a></td>
+                    <td><a href="./usuario.php">Zeus2mil</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">369</a></td>
-                    <td>BunnyFire</td>
+                    <td><a href="./usuario.php">369</a></td>
+                    <td><a href="./usuario.php">BunnyFire</a></td>
                   </tr>
                   </tbody>
                   <!-- Cabecera Tabla Ronda END -->
@@ -471,7 +464,7 @@
 
               <!-- Card Header START -->
               <div class="card-header">
-                <h3 class="card-title"><a href="#">Grupo 1</a></h3>
+                <h3 class="card-title"><a href="./grupo.php">Grupo 1</a></h3>
               </div>
               <!-- Card Header END -->
               
@@ -482,7 +475,7 @@
                   <!-- Cabecera Tabla Torneo START -->
                   <thead>
                   <tr>
-                    <th>ID</th>
+                    <th>ID-Torneo</th>
                     <th>Equipo</th>
                     <th>Puntos</th>
                     <th>Resultado</th>
@@ -494,36 +487,36 @@
                   <!-- Contenido Tabla Torneo START -->
                   <tbody>
                   <tr>
-                    <td>256</td>
-                    <td><a href="#">Fuego Rapido</a></td>
+                    <td><a href="./equipo.php">256</a></td>
+                    <td><a href="./equipo.php">Fuego Rapido</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>206</td>
-                    <td><a href="#">Las Estrellas</a></td>
+                    <td><a href="./equipo.php">206</a></td>
+                    <td><a href="./equipo.php">Las Estrellas</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>056</td>
-                    <td><a href="#">Nube Negra</a></td>
+                    <td><a href="./equipo.php">056</a></td>
+                    <td><a href="./equipo.php">Nube Negra</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>060</td>
-                    <td><a href="#">Sol Naciente</a></td>
+                    <td><a href="./equipo.php">060</a></td>
+                    <td><a href="./equipo.php">Sol Naciente</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>125</td>
-                    <td><a href="#">Frio Quemador</a></td>
+                    <td><a href="./equipo.php">125</a></td>
+                    <td><a href="./equipo.php">Frio Quemador</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
@@ -545,7 +538,7 @@
 
               <!-- Card Header START -->
               <div class="card-header">
-                <h3 class="card-title"><a href="#">Grupo 2</a></h3>
+                <h3 class="card-title"><a href="./grupo.php">Grupo 2</a></h3>
               </div>
               <!-- Card Header END -->
               
@@ -556,7 +549,7 @@
                   <!-- Cabecera Tabla Torneo START -->
                   <thead>
                   <tr>
-                    <th>ID</th>
+                    <th>ID-Torneo</th>
                     <th>Equipo</th>
                     <th>Puntos</th>
                     <th>Resultado</th>
@@ -568,36 +561,36 @@
                   <!-- Contenido Tabla Torneo START -->
                   <tbody>
                   <tr>
-                    <td>256</td>
-                    <td><a href="#">Fuego Rapido</a></td>
+                    <td><a href="./equipo.php">256</a></td>
+                    <td><a href="./equipo.php">Fuego Rapido</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>206</td>
-                    <td><a href="#">Las Estrellas</a></td>
+                    <td><a href="./equipo.php">206</a></td>
+                    <td><a href="./equipo.php">Las Estrellas</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>056</td>
-                    <td><a href="#">Nube Negra</a></td>
+                    <td><a href="./equipo.php">056</a></td>
+                    <td><a href="./equipo.php">Nube Negra</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>060</td>
-                    <td><a href="#">Sol Naciente</a></td>
+                    <td><a href="./equipo.php">060</a></td>
+                    <td><a href="./equipo.php">Sol Naciente</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>125</td>
-                    <td><a href="#">Frio Quemador</a></td>
+                    <td><a href="./equipo.php">125</a></td>
+                    <td><a href="./equipo.php">Frio Quemador</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
@@ -619,7 +612,7 @@
 
               <!-- Card Header START -->
               <div class="card-header">
-                <h3 class="card-title"><a href="#">Grupo 3</a></h3>
+                <h3 class="card-title"><a href="./grupo.php">Grupo 3</a></h3>
               </div>
               <!-- Card Header END -->
               
@@ -630,7 +623,7 @@
                   <!-- Cabecera Tabla Torneo START -->
                   <thead>
                   <tr>
-                    <th>ID</th>
+                    <th>ID-Torneo</th>
                     <th>Equipo</th>
                     <th>Puntos</th>
                     <th>Resultado</th>
@@ -642,22 +635,36 @@
                   <!-- Contenido Tabla Torneo START -->
                   <tbody>
                   <tr>
-                    <td>256</td>
-                    <td><a href="#">Fuego Rapido</a></td>
+                    <td><a href="./equipo.php">256</a></td>
+                    <td><a href="./equipo.php">Fuego Rapido</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>206</td>
-                    <td><a href="#">Las Estrellas</a></td>
+                    <td><a href="./equipo.php">206</a></td>
+                    <td><a href="./equipo.php">Las Estrellas</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>056</td>
-                    <td><a href="#">Nube Negra</a></td>
+                    <td><a href="./equipo.php">056</a></td>
+                    <td><a href="./equipo.php">Nube Negra</a></td>
+                    <td>5</td>
+                    <td>V - D - E - V</td>
+                    <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="./equipo.php">060</a></td>
+                    <td><a href="./equipo.php">Sol Naciente</a></td>
+                    <td>5</td>
+                    <td>V - D - E - V</td>
+                    <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="./equipo.php">125</a></td>
+                    <td><a href="./equipo.php">Frio Quemador</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
@@ -679,7 +686,7 @@
 
               <!-- Card Header START -->
               <div class="card-header">
-                <h3 class="card-title"><a href="#">Grupo 4</a></h3>
+                <h3 class="card-title"><a href="./grupo.php">Grupo 4</a></h3>
               </div>
               <!-- Card Header END -->
               
@@ -690,7 +697,7 @@
                   <!-- Cabecera Tabla Torneo START -->
                   <thead>
                   <tr>
-                    <th>ID</th>
+                    <th>ID-Torneo</th>
                     <th>Equipo</th>
                     <th>Puntos</th>
                     <th>Resultado</th>
@@ -702,36 +709,36 @@
                   <!-- Contenido Tabla Torneo START -->
                   <tbody>
                   <tr>
-                    <td>256</td>
-                    <td><a href="#">Fuego Rapido</a></td>
+                    <td><a href="./equipo.php">256</a></td>
+                    <td><a href="./equipo.php">Fuego Rapido</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>206</td>
-                    <td><a href="#">Las Estrellas</a></td>
+                    <td><a href="./equipo.php">206</a></td>
+                    <td><a href="./equipo.php">Las Estrellas</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>056</td>
-                    <td><a href="#">Nube Negra</a></td>
+                    <td><a href="./equipo.php">056</a></td>
+                    <td><a href="./equipo.php">Nube Negra</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>060</td>
-                    <td><a href="#">Sol Naciente</a></td>
+                    <td><a href="./equipo.php">060</a></td>
+                    <td><a href="./equipo.php">Sol Naciente</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                   </tr>
                   <tr>
-                    <td>125</td>
-                    <td><a href="#">Frio Quemador</a></td>
+                    <td><a href="./equipo.php">125</a></td>
+                    <td><a href="./equipo.php">Frio Quemador</a></td>
                     <td>5</td>
                     <td>V - D - E - V</td>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
@@ -745,7 +752,7 @@
 
             </div>
           </div>
-          <!-- Tabla Grupo 4 END -->        
+          <!-- Tabla Grupo 4 END -->      
 
         </div>
         <!-- Grupos (en caso de haber) END -->
@@ -774,7 +781,7 @@
 
               <!-- Card Header START -->
               <div class="card-header">
-                <h3 class="card-title"><a href="#">Octavos de Final</a></h3>
+                <h3 class="card-title"><a href="./rondas.php">Octavos de Final</a></h3>
               </div>
               <!-- Card Header END -->
               
@@ -796,50 +803,50 @@
                   <!-- Contenido Tabla Ronda START -->
                   <tbody>
                   <tr>
-                    <td><a href="#">LLuvia Inesperada</a></td>
-                    <td><a href="#">Fuego Rapido</a></td>
+                    <td><a href="./equipo.php">LLuvia Inesperada</a></td>
+                    <td><a href="./equipo.php">Fuego Rapido</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Mar sin Agua</a></td>
-                    <td><a href="#">Las Estrellas</a></td>
+                    <td><a href="./equipo.php">Mar sin Agua</a></td>
+                    <td><a href="./equipo.php">Las Estrellas</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Lluvia Eterna</a></td>
-                    <td><a href="#">Nube Negra</a></td>
+                    <td><a href="./equipo.php">Lluvia Eterna</a></td>
+                    <td><a href="./equipo.php">Nube Negra</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Mente en Llamas</a></td>
-                    <td><a href="#">Sol Naciente</a></td>
+                    <td><a href="./equipo.php">Mente en Llamas</a></td>
+                    <td><a href="./equipo.php">Sol Naciente</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Manda Artica</a></td>
-                    <td><a href="#">Frio Quemador</a></td>
+                    <td><a href="./equipo.php">Manda Artica</a></td>
+                    <td><a href="./equipo.php">Frio Quemador</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Lluvia Eterna</a></td>
-                    <td><a href="#">Nube Negra</a></td>
+                    <td><a href="./equipo.php">Lluvia Eterna</a></td>
+                    <td><a href="./equipo.php">Nube Negra</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Mente en Llamas</a></td>
-                    <td><a href="#">Sol Naciente</a></td>
+                    <td><a href="./equipo.php">Mente en Llamas</a></td>
+                    <td><a href="./equipo.php">Sol Naciente</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Manda Artica</a></td>
-                    <td><a href="#">Frio Quemador</a></td>
+                    <td><a href="./equipo.php">Manda Artica</a></td>
+                    <td><a href="./equipo.php">Frio Quemador</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
@@ -860,7 +867,7 @@
 
               <!-- Card Header START -->
               <div class="card-header">
-                <h3 class="card-title"><a href="#">Cuartos de Final</a></h3>
+                <h3 class="card-title"><a href="./rondas.php">Cuartos de Final</a></h3>
               </div>
               <!-- Card Header END -->
               
@@ -882,26 +889,26 @@
                   <!-- Contenido Tabla Ronda START -->
                   <tbody>
                   <tr>
-                    <td><a href="#">LLuvia Inesperada</a></td>
-                    <td><a href="#">Fuego Rapido</a></td>
+                    <td><a href="./equipo.php">LLuvia Inesperada</a></td>
+                    <td><a href="./equipo.php">Fuego Rapido</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Mar sin Agua</a></td>
-                    <td><a href="#">Las Estrellas</a></td>
+                    <td><a href="./equipo.php">Mar sin Agua</a></td>
+                    <td><a href="./equipo.php">Las Estrellas</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Lluvia Eterna</a></td>
-                    <td><a href="#">Nube Negra</a></td>
+                    <td><a href="./equipo.php">Lluvia Eterna</a></td>
+                    <td><a href="./equipo.php">Nube Negra</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Mente en Llamas</a></td>
-                    <td><a href="#">Sol Naciente</a></td>
+                    <td><a href="./equipo.php">Mente en Llamas</a></td>
+                    <td><a href="./equipo.php">Sol Naciente</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
@@ -922,7 +929,7 @@
 
               <!-- Card Header START -->
               <div class="card-header">
-                <h3 class="card-title"><a href="#">SemiFinal</a></h3>
+                <h3 class="card-title"><a href="./rondas.php">SemiFinal</a></h3>
               </div>
               <!-- Card Header END -->
               
@@ -944,14 +951,14 @@
                   <!-- Contenido Tabla Torneo START -->
                   <tbody>
                   <tr>
-                    <td><a href="#">LLuvia Inesperada</a></td>
-                    <td><a href="#">Fuego Rapido</a></td>
+                    <td><a href="./equipo.php">LLuvia Inesperada</a></td>
+                    <td><a href="./equipo.php">Fuego Rapido</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Mar sin Agua</a></td>
-                    <td><a href="#">Las Estrellas</a></td>
+                    <td><a href="./equipo.php">Mar sin Agua</a></td>
+                    <td><a href="./equipo.php">Las Estrellas</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
@@ -972,7 +979,7 @@
 
               <!-- Card Header START -->
               <div class="card-header">
-                <h3 class="card-title"><a href="#">Final</a></h3>
+                <h3 class="card-title"><a href="./rondas.php">Final</a></h3>
               </div>
               <!-- Card Header END -->
               
@@ -994,8 +1001,8 @@
                   <!-- Contenido Tabla Ronda START -->
                   <tbody>
                   <tr>
-                    <td><a href="#">LLuvia Inesperada</a></td>
-                    <td><a href="#">Fuego Rapido</a></td>
+                    <td><a href="./equipo.php">LLuvia Inesperada</a></td>
+                    <td><a href="./equipo.php">Fuego Rapido</a></td>
                     <td>20/06 18:00</td>
                     <td>-</td>
                   </tr>
@@ -1047,7 +1054,7 @@
                   <!-- Cabecera Tabla Premios START -->
                   <thead>
                   <tr>
-                    <th>Nombre</th>
+                    <th>Nombre Premio</th>
                     <th>Descripcion</th>
                     <th>Entregado</th>
                   </tr>
@@ -1057,17 +1064,17 @@
                   <!-- Contenido Tabla Premios START -->
                   <tbody>
                   <tr>
-                    <td><a href="#">Primer Puesto</a></td>
+                    <td><a href="./premio.php">Primer Puesto</a></td>
                     <td>10000 Monedas Virtuales</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Segundo Puesto</a></td>
+                    <td><a href="./premio.php">Segundo Puesto</a></td>
                     <td>5000 Monedas Virtuales</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Tercer Puesto</a></td>
+                    <td><a href="./premio.php">Tercer Puesto</a></td>
                     <td>3000 Monedas Virtuales</td>
                     <td>-</td>
                   </tr>
@@ -1088,7 +1095,7 @@
         <!--Subtitulo START-->
         <div class="row mb-4">
           <div class="col-6">
-            <h2 class="m-0 text-dark">Acciones Torneo {Nombre Torneo}</h2>
+            <h2 class="m-0 text-dark">Acciones Torneo {NombreTorneo}</h2>
           </div>
         </div>
         <!--Subtitulo END-->
@@ -1204,9 +1211,9 @@
 
                   <!-- Input Contraseña START -->
                   <div class="form-group row">
-                    <label for="inputPassword3" class="col-4">Password</label>
+                    <label for="inputPassword3" class="col-4">Contraseña</label>
                     <div class="col-8">
-                      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                      <input type="password" class="form-control" id="inputPassword3" placeholder="Contraseña">
                     </div>
                   </div>
                   <!-- Input Contraseña END -->
@@ -1254,9 +1261,9 @@
 
                   <!-- Input Contraseña START -->
                   <div class="form-group row">
-                    <label for="inputPassword3" class="col-4">Password</label>
+                    <label for="inputPassword3" class="col-4">Contraseña</label>
                     <div class="col-8">
-                      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                      <input type="password" class="form-control" id="inputPassword3" placeholder="Contraseña">
                     </div>
                   </div>
                   <!-- Input Contraseña END -->
