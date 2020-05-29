@@ -302,37 +302,37 @@
               <!-- Titulo Form END -->
               
               <!-- Form START -->
-              <form role="form">
+              <form role="form" action="../php/crearProducto.php" method="POST" enctype="multipart/form-data">
                 <div class="row card-body">
                   
                   <!-- Input Nombre Producto START -->
                   <div class="form-group col-6">
-                    <label for="exampleInputEmail1">Nombre Producto</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre Producto...">
+                    <label for="nombreProducto">Nombre Producto</label>
+                    <input type="text" class="form-control" name="nombreProducto" id="nombreProducto" placeholder="Nombre Producto..." required>
                   </div>
                   <!-- Input Nombre Producto END -->
 
                   <!-- Input Precio Producto START -->
                   <div class="form-group col-6">
-                    <label for="exampleInputPassword1">Precio Producto</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Precio Producto...">
+                    <label for="precioProducto">Precio Producto</label>
+                    <input type="text" class="form-control" name="precioProducto" id="precioProducto" placeholder="Precio Producto..." required>
                   </div>
                   <!-- Input Precio Producto END -->
 
                   <!-- Input Stock Producto START -->
                   <div class="form-group col-6">
-                    <label for="exampleInputPassword1">Stock</label>
-                    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Stock del Producto...">
+                    <label for="stockProducto">Stock</label>
+                    <input type="number" class="form-control" name="stockProducto" id="stockProducto" placeholder="Stock del Producto..." required>
                   </div>
                   <!-- Input Stock Producto END -->
 
                   <!-- Input Imgaen Producto START -->
                   <div class="form-group col-6">
-                    <label for="exampleInputFile">Agregar imagen</label>
+                    <label for="foto">Agregar imagen</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Elija la imagen</label>
+                        <input type="file" class="custom-file-input" name="foto" id="foto" required>
+                        <label class="custom-file-label" for="foto">Elija la imagen</label>
                       </div>
                       <div class="input-group-append">
                         <span class="input-group-text" id="">Subir</span>
@@ -343,8 +343,8 @@
 
                   <!-- Input Descripcion Producto START -->
                   <div class="form-group col-6">
-                    <label>Descripcion Producto</label>
-                    <textarea class="form-control" rows="3" placeholder="Descripcion Producto ..."></textarea>
+                    <label for="descrpcionProducto">Descripcion Producto</label>
+                    <textarea class="form-control" name="descripcionProducto" id="descrpcionProducto" rows="3" placeholder="Descripcion Producto ..." required></textarea>
                   </div>
                   <!-- Input Descripcion Producto END -->
 
@@ -352,7 +352,7 @@
 
                 <!-- Submit Producto START-->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Crear Torneo</button>
+                  <button type="submit" class="btn btn-primary">Crear Producto</button>
                 </div>
                 <!-- Submit Producto END-->
 
