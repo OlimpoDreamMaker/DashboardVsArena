@@ -190,25 +190,25 @@
               <!-- Card Header END -->
 
               <!-- Form START -->
-              <form role="form">
+              <form role="form" action="../php/crearJuego.php" method="POST" enctype="multipart/form-data">
                 <div class="row card-body">
 
                   <!-- Input Nombre Juego START -->
                   <div class="form-group col-6">
-                    <label for="exampleInputEmail1">Nombre Juego</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre Juego...">
+                    <label for="nombreJuego">Nombre Juego</label>
+                    <input type="text" class="form-control" id="nombreJuego" name="nombreJuego" placeholder="Nombre Juego...">
                   </div>
                   <!-- Input Nombre Juego END -->
 
                   <!-- Input Plataforma START -->
                   <div class="form-group col-6">
                     <label>Plataforma</label>
-                    <select class="form-control">
-                      <option>PC</option>
-                      <option>PS3/4</option>
-                      <option>XBOX</option>
-                      <option>MOBILE</option>
-                      <option>TODAS LAS PLATAFORMAS</option>
+                    <select class="form-control" name="plataforma">
+                      <option value="PC">PC</option>
+                      <option value="PS3/4">PS3/4</option>
+                      <option value="XBOX">XBOX</option>
+                      <option value="MOBILE">MOBILE</option>
+                      <option value="Multi Plataforma">Multi Plataforma</option>
                     </select>
                   </div>
                   <!-- Input Plataforma END -->
@@ -218,8 +218,8 @@
                     <label for="exampleInputFile">Subir Portada</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Elija el archivo</label>
+                        <input type="file" class="custom-file-input" name="foto" id="foto">
+                        <label class="custom-file-label" for="foto">Elija el archivo</label>
                       </div>
                       <div class="input-group-append">
                         <span class="input-group-text" id="">Subir</span>
@@ -231,7 +231,7 @@
                   <!-- Detalles Juego START -->
                   <div class="form-group col-6">
                     <label>Detalles Juego</label>
-                    <textarea class="form-control" rows="3" placeholder="Detalles Juego ..."></textarea>
+                    <textarea class="form-control" rows="3" id="descripcionJuego" name="descripcionJuego" placeholder="Detalles Juego ..."></textarea>
                   </div>
                   <!-- Detalles Juego END -->
 
