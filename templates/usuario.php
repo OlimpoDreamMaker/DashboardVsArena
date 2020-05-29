@@ -445,6 +445,68 @@
         <!-- Torneos en los que Participo END -->
 
         <!--Subtitulo START-->
+        <div class="row mb-4">
+          <div class="col-12">
+            <h2 class="m-0 text-dark">Hacer Admin</h2><!--O QUITAR ADMIN-->
+          </div>
+        </div>
+        <!--Subtitulo END-->
+
+        <div class="row">
+
+          <!-- Dar/Quitar Admin a usuario START -->
+          <div class="col-6">
+            <div class="card card-warning"><!--Dar success|Quitar danger-->
+              
+              <!-- Card Header START -->
+              <div class="card-header">
+                <h3 class="card-title">Dar/Quitar Admin</h3>
+              </div>
+              <!-- Card Header END -->
+
+              <p class="m-2 text-dark">Ingrese su cuenta para dar/quitar permisos de administrador</p>
+              
+              <!-- Form START -->
+              <form class="form-horizontal">
+                
+                <!-- Card Body START -->
+                <div class="card-body">
+
+                  <!-- Input Usuario START -->
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-4">Cuenta</label>
+                    <div class="col-8">
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="Cuenta">
+                    </div>
+                  </div>
+                  <!-- Input Usuario END -->
+
+                  <!-- Input Contraseña START -->
+                  <div class="form-group row">
+                    <label for="inputPassword3" class="col-4">Contraseña</label>
+                    <div class="col-8">
+                      <input type="password" class="form-control" id="inputPassword3" placeholder="Contraseña">
+                    </div>
+                  </div>
+                  <!-- Input Contraseña END -->
+                </div>
+                <!-- Card Body END -->
+
+                <!-- Submit START -->
+                <div class="card-footer d-flex justify-content-center">
+                  <button type="submit" class="btn btn-warning">Dar/Quitar Admin</button>
+                </div>
+                <!-- Submit END -->
+
+              </form>
+              <!-- Form END -->
+            </div>
+          </div>
+          <!-- Dar/Quitar Admin a usuario END -->
+
+        </div>
+
+        <!--Subtitulo START-->
         <div class="row mt-4 mb-4">
           <div class="col-6">
             <h2 class="m-0 text-dark">Enviar un email a {Nombre Usuario}</h2>
