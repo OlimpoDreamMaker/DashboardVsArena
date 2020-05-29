@@ -1,6 +1,6 @@
 <?php
 
-  function($conexion,$id){
+  function isAdmin($conexion,$id){
     $consulta = "SELECT * FROM usuarios WHERE idUsuario='$id'";
     $resultado = mysqli_query($conexion, $consulta);
     $user = mysqli_fetch_assoc($resultado);
