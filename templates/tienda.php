@@ -289,7 +289,7 @@
         <!-- Formularios START -->
         <div class="row">
           
-          <!-- Crear Producto START -->
+          <!-- Crear Producto y Cupon START -->
           <div class="col-md-12">
 
             <!-- Card START -->
@@ -355,6 +355,59 @@
                   <button type="submit" class="btn btn-primary">Crear Producto</button>
                 </div>
                 <!-- Submit Producto END-->
+
+              </form>
+              <!-- Form END -->
+
+            </div>
+            <!-- Card END -->
+
+            <!-- Card START -->
+            <div class="card card-primary">
+
+              <!-- Titulo Form START -->
+              <div class="card-header">
+                <h3 class="card-title">Crear Cupon</h3>
+              </div>
+              <!-- Titulo Form END -->
+              
+              <!-- Form START -->
+              <form role="form" action="../php/crearProducto.php" method="POST" enctype="multipart/form-data">
+                <div class="row card-body">
+                  
+                  <!-- Input Nombre Cupon START -->
+                  <div class="form-group col-6">
+                    <label for="nombreProducto">Nombre Cupon</label>
+                    <input type="text" class="form-control" name="nombreProducto" id="nombreProducto" placeholder="" required>
+                  </div>
+                  <!-- Input Nombre Cupon END -->
+
+                  <!-- Input Porcentaje Descuento Cupon START -->
+                  <div class="form-group col-6">
+                    <label for="precioProducto">Porcentaje de descuento</label>
+                    <input type="text" class="form-control" name="precioProducto" id="precioProducto" placeholder="" required>
+                  </div>
+                  <!-- Input Porcentaje Descuento Cupono END -->
+
+                  <!-- Input Fechas START -->
+                  <div class="form-group col-6">
+                    <label>Fecha y tiempo de rango del cupon:</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="far fa-clock"></i></span>
+                      </div>
+                      <input type="text" class="form-control float-right" id="reservationtime">
+                    </div>
+                  </div>
+                  <!-- Input Fechas END -->
+
+                </div>
+
+                <!-- Submit Cupon START-->
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Crear Cupon</button>
+                </div>
+                <!-- Submit Cupon END-->
 
               </form>
               <!-- Form END -->
