@@ -94,8 +94,13 @@
           <div class="col-lg-3 col-6">
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>44</h3>
-
+                <?php
+                require_once("../php/conexionBD.php");
+                $conexion = conectar();
+                require_once("../php/cantidadJuegos.php");
+                echo "<h3>".cantidadJuegos($conexion)."</h3>";
+                desconectarBD($conexion); 
+                ?>
                 <p>Juegos Totales</p>
               </div>
               <div class="icon">
@@ -124,40 +129,17 @@
                     <th>ID-Juego</th>
                     <th>Juego</th>
                     <th>Plataforma</th>
-                    <th>Eliminar</th>
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
+                  <?php
+                  require_once("../php/tablaJuegos.php");
+                  ?>
+                  <!--tr>
                     <td><a href=".juego.php">256</a></td>
                     <td><a href="./juego.php">LOL</a></td>
                     <td>PC</td>
-                    <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="./juego.php">115</a></td>
-                    <td><a href="./juego.php">CS:GO</a></td>
-                    <td>PC</td>
-                    <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="./juego.php">105</a></td>
-                    <td><a href="./juego.php">Clash Royale</a></td>
-                    <td>Mobile</td>
-                    <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="./juego.php">015</a></td>
-                    <td><a href="./juego.php">Destiny 2</a></td>
-                    <td>PC/PS4/XBOX</td>
-                    <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="./juego.php">057</a></td>
-                    <td><a href="./juego.php">Fifa 20</a></td>
-                    <td>PC/PS4/XBOX</td>
-                    <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
-                  </tr>
+                  </tr-->
                   </tbody>
                 </table>
               </div>
