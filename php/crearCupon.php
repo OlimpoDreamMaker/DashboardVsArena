@@ -1,16 +1,18 @@
 <?php
   require_once("conexionBD.php");
+  require_once("tomarFecha.php");
   $conexion = conectar(); 
 
   $cupon = $_POST['nombreCupon'];
   $porcentajeDescuento = $_POST['porcentajeDescuento'];
-  $estadoCupon = $_POST['estadoCupon']; //Dos estado posibles,activo, caducado
-  $inicioCupon = $_POST['fechaInicio'];
-  $finCupon = $_POST['fechaFin'];
-  $consulta = "INSERT INTO Cupones(nombreCupon,porcentajeDescuento,estadoCupon,inicioCupon,finCupon) VALUES ('$cupon','$porcentajeDescuento','$estadoCupon', '$inicioCupon', '$finCupon')";
+  $fecha = $_POST['fechaCupon'];
+  $fechaInicio = primeraFecha($fecha);
+  $fechaFin = segundaFecha($fecha);
+  $consulta = "INSERT INTO Cupones(nombreCupon,porcentajeDescuento,inicioCupon,finCupon) VALUES ('$cupon','$porcentajeDescuento', '$fechaInicio', '$fechaFin')";
   
   mysqli_query($conexion, $consulta);   
   
   $desconectar = desconectarBD($conexion);
+  header("Location: ../templates/tienda.php");
   
 ?>

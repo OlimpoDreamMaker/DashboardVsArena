@@ -372,31 +372,31 @@
               <!-- Titulo Form END -->
               
               <!-- Form START -->
-              <form role="form" action="../php/crearProducto.php" method="POST" enctype="multipart/form-data">
+              <form role="form" action="../php/crearCupon.php" method="POST" enctype="multipart/form-data">
                 <div class="row card-body">
                   
                   <!-- Input Nombre Cupon START -->
                   <div class="form-group col-6">
-                    <label for="nombreProducto">Nombre Cupon</label>
-                    <input type="text" class="form-control" name="nombreProducto" id="nombreProducto" placeholder="" required>
+                    <label for="nombreCupon">Nombre Cupon</label>
+                    <input type="text" class="form-control" name="nombreCupon" id="nombreProducto" placeholder="" required>
                   </div>
                   <!-- Input Nombre Cupon END -->
 
                   <!-- Input Porcentaje Descuento Cupon START -->
                   <div class="form-group col-6">
-                    <label for="precioProducto">Porcentaje de descuento</label>
-                    <input type="text" class="form-control" name="precioProducto" id="precioProducto" placeholder="" required>
+                    <label for="porcentajeDescuento">Porcentaje de descuento</label>
+                    <input type="text" class="form-control" name="porcentajeDescuento" id="porcentajeDescuento" placeholder="" required>
                   </div>
                   <!-- Input Porcentaje Descuento Cupono END -->
 
                   <!-- Input Fechas START -->
                   <div class="form-group col-6">
-                    <label>Fecha y tiempo de rango del cupon:</label>
+                    <label for="reservationtime">Fecha y tiempo de rango del cupon:</label>
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <span class="input-group-text"><i class="far fa-clock"></i></span>
                       </div>
-                      <input type="text" class="form-control float-right" id="reservationtime">
+                      <input type="text" class="form-control float-right" id="reservationtime" name="fechaCupon">
                     </div>
                   </div>
                   <!-- Input Fechas END -->
@@ -550,7 +550,7 @@
       timePicker: true,
       timePickerIncrement: 30,
       locale: {
-        format: 'MM/DD/YYYY hh:mm A'
+        format: 'YYYY/MM/DD HH:mm:ss' //'MM/DD/YYYY hh:mm A'
       }
     })
     //Date range as a button
