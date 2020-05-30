@@ -144,3 +144,71 @@
 
 ### ¿Que se les puede hacer? 
 <!--BUSCAR QUE SE LE PUEDE HACER-->
+
+## BASE DE DATOS
+
+### TABLAS ESENCIALES 
+
+- USUARIOS
+- TORNEOS
+- COMPRAS/VENTAS
+- PRODUCTOS
+- JUEGOS
+
+### Usuarios
+- idUsuario
+- usuario
+- emailUsuario
+- passUsuario
+- avatarUsuario
+- saldoEfectivo
+- saldoMonVir (MonedaVirtual)
+- isAdmin
+
+### Torneos
+- idTorneo
+- torneo
+- juego
+- cantMaxEquipos
+- modalidad
+- estado (en espera, activo, concluido, cancelado)(los estados "en espera","activo","concluido" son estados automaticos que son conectados con la fecha, osea que estos estados no podran ser modificados, el estado cancelado es algo que un admin debera hacer)
+- fechaInicio
+- fechaFin
+- fasesDeGrupos (un valor booleano(VoF) en caso de que exista la fase de grupo)
+- juego(idJuego)
+
+### Compras/Ventas
+- idVenta
+- cantidadProductos
+- totalVenta
+- usuarioComprador(idUsuario)
+
+### Productos
+- idProducto
+- producto
+- precio
+- stock
+- descripcion
+- imgProducto
+
+### Equipos
+- idEquipo
+- equipo
+- avatarEquipo
+- lider_idUsuario
+
+## Relaciones
+
+- Usuarios <=> Ventas <=> DetallesVentas <=> Productos <=> Imagenes LISTO
+- Usuario <=> Cupones (antes de realizar la compra/venta comprobar si el usuario tiene o no cupones) LISTO
+  - Cupones <=> Usuarios <=> Ventas LISTO
+- Juegos <=> Imagenes LISTO
+
+
+
+
+# PREGUNTAS
+- Hago un panel para editar noticias mas su tabla en la DB
+- Necesito que el usuario en editar perfil tenga para crear equipos y pueda agregar y eliminar integrantes como eliminar el equipo, cambiar el nombre, cambiar el avatar del equipo
+- y ponele q te inviten a un equipo, lo hago por email o por el panel de editar perfil
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 
