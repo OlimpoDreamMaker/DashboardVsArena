@@ -1,9 +1,23 @@
+<?php
+require_once("../php/conexionBD.php");
+$conexion = conectar();
+$idCupon = $_GET['id'];
+$consulta = "SELECT * FROM cupones WHERE idCupon='$idCupon'";
+$resultado = mysqli_query($conexion, $consulta);
+$cupon = mysqli_fetch_assoc($resultado);
+$nombreCupon = $cupon['nombreCupon'];
+$estadoCupon = $cupon['estadoCupon'];
+$porcentajeDescuento = $cupon['porcentajeDescuento'];
+$inicioCupon = $cupon['inicioCupon'];
+$finCupon = $cupon['finCupon'];
+desconectarBD($conexion);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>VsArena | Dashboard-Torneo</title>
+  <title>Vs_Arena Dashboard-Torneo</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -49,14 +63,14 @@
   <!-- Content Wrapper. Contains page content START-->
   <div class="content-wrapper">
 
-    <!-- Content Header (Page header) START-->
+    <!-- Content Header (Page header) START -->
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
 
           <!-- Titulo Page START -->
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Tienda</h1>
+            <h1 class="m-0 text-dark">Cupon <?php echo $nombreCupon;?></h1>
           </div>
           <!-- Titulo Page END -->
 
@@ -64,7 +78,8 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="./usuarios.php">Dashboard | VsArena</a></li>
-              <li class="breadcrumb-item active">Tienda</li>
+              <li class="breadcrumb-item"><a href="./tienda.php">Tienda</a></li>
+              <li class="breadcrumb-item active"><?php echo $nombreCupon;?></li>
             </ol>
           </div>
           <!-- Navegacion Pages END -->
@@ -72,272 +87,268 @@
         </div>
       </div>
     </div>
-    <!-- Content Header (Page header) END-->
-
-    <!--Content START-->
+    <!-- Content Header (Page header) END -->
+    
+    <!-- Contento START -->
     <section class="content">
-
-      <!--Fluid START-->
       <div class="container-fluid">
-
+        
         <!--Subtitulo START-->
         <div class="row mb-4">
           <div class="col-6">
-            <h2 class="m-0 text-dark">Informacion Tienda</h2>
+            <h2 class="m-0 text-dark">Informacion <?php echo $nombreCupon;?></h2>
           </div>
         </div>
         <!--Subtitulo END-->
 
-        <!-- Small boxes (Stat box) START-->
-        <div class="row">
-
-          <!-- Box 1 START -->
+        <!-- Small boxes (Stat box) START -->
+        <!--div class="row">
           <div class="col-lg-3 col-6">
+            <!-- small box --
             <div class="small-box bg-primary">
               <div class="inner">
-                <h3>44</h3>
-                <p>Ventas Totales</p>
+                <h3>30</h3>
+
+                <p>Participantes Inscriptos</p>
               </div>
               <div class="icon">
-                <i class="fas fa-money-bill-wave"></i>
+                <i class="fas fa-trophy"></i>
               </div>
+              <a href="#" class="small-box-footer">Ver Usuarios Inscriptos <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- Box 1 END -->
-
-          <!-- Box 2 START -->
           <div class="col-lg-3 col-6">
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>65</h3>
-                <p>Cantidad de Productos</p>
+                <h3><i class="fas fa-coins"></i> s/Premios</h3>
+                <p>Premio</p>
               </div>
               <div class="icon">
-                <i class="fas fa-box"></i>
+                <i class="fas fa-trophy"></i>
               </div>
+              <a href="#" class="small-box-footer">Ver Premios <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- Box 2 END -->
-
-          <!-- Box 3 START -->
           <div class="col-lg-3 col-6">
+            -- small box --
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>$6.500</h3>
-                <p>Ingresos totales</p>
+                <h3>16/05-18:00</h3>
+                <p>Fecha de Inicio</p>
               </div>
               <div class="icon">
-                <i class="fas fa-chart-bar"></i>
+                <i class="fas fa-trophy"></i>
               </div>
             </div>
           </div>
-          <!-- Box 3 END -->
-
-          <!-- Box 4 START -->
           <div class="col-lg-3 col-6">
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>0</h3>
-                <p>Ventas Canceladas</p>
+                <h3>20/05-20:00</h3>
+                <p>Fecha de Fin</p>
               </div>
               <div class="icon">
-                <i class="far fa-chart-bar"></i>
+                <i class="fas fa-trophy"></i>
               </div>
             </div>
           </div>
-          <!-- Box 4 END -->
+        </div-->
+        <!-- Small boxes (Stat box) END -->
 
-        </div>
-        <!-- Small boxes (Stat box) END-->
-
-        <!--Tablas START-->
+        <!-- Tabla Cupon START -->
         <div class="row">
-
-          <!-- Tabla Productos START -->
+          
+          <!-- Tabla Cupon START -->
           <div class="col-12">
-            
-            <!-- Card START -->
             <div class="card">
 
               <!-- Card Header START -->
               <div class="card-header">
-                <h3 class="card-title">Productos</h3>
+                <h3 class="card-title">Cupon - {NombreCupon}</h3>
               </div>
               <!-- Card Header END -->
-
-              <!-- Card Body START -->
-              <div class="card-body">
-                <table id="example2" class="table table-bordered table-hover">
-
-                  <!-- Cabecera Tabla Productos START -->
-                  <thead>
-                  <tr>
-                    <th>ID-Productos</th>
-                    <th>Nombre Producto</th>
-                    <th>Precio</th>
-                    <th>Stock</th>
-                  </tr>
-                  </thead>
-                  <!-- Cabecera Tabla Productos END -->
-
-                  <!-- Contenido Productos START -->
-                  <tbody>
-                  <tr>
-                    <td><a href="./producto.php">256</a></td>
-                    <td><a href="./producto.php">Tazas LOL</a></td>
-                    <td>$20</td>
-                    <td>17</td>
-                  </tr>
-                  <tr>
-                    <td><a href="./producto.php">125</a></td>
-                    <td><a href="./producto.php">Gorra Fortnite</a></td>
-                    <td>$15</td>
-                    <td>100</td>
-                  </tr>
-                  <tr>
-                    <td><a href="./producto.php">056</a></td>
-                    <td><a href="./producto.php">Campera CS:G0</a></td>
-                    <td>$35</td>
-                    <td>30</td>
-                  </tr>
-                  </tbody>
-                  <!-- Contenido Productos END -->
-
-                </table>
-              </div>
-              <!-- Card Body END -->
-
-            </div>
-            <!-- Card END -->
-
-          </div>
-          <!-- Tabla Productos END -->
-
-          <!-- Tabla Ventas START -->
-          <div class="col-12">
-
-            <!-- Card START -->
-            <div class="card">
               
-              <!-- Card Header START -->
-              <div class="card-header">
-                <h3 class="card-title">Ventas</h3>
-              </div>
-              <!-- Card Header END -->
-
               <!-- Card Body START -->
-              <div class="card-body">
-
-                <table id="example3" class="table table-bordered table-hover">
+              <div class="card-body p-0">
+                <table class="table table-striped">
                   
-                  <!-- Cabecera Tabla Ventas START -->
-                  <thead>
-                  <tr>
-                    <th>ID-Venta</th>
-                    <th>ID-Comprador</th>
-                    <th>Ver Venta</th>
-                    <th>Total</th>
-                  </tr>
-                  </thead>
-                  <!-- Cabecera Tabla Ventas END -->
-
-                  <!-- Contenido Ventas START -->
-                  <tbody>
-                  <tr>
-                    <td><a href="./venta-compra.php">256</a></td>
-                    <td><a href="./usuario.php">033</a></td>
-                    <td><a href="./venta-compra.php">Ver Descripcion</a></td>
-                    <td>$170</td>
-                  </tr>
-                  <tr>
-                    <td><a href="./venta-compra.php">125</a></td>
-                    <td><a href="./usuario.php">703</a></td>
-                    <td><a href="./venta-compra.php">Ver Descripcion</a></td>
-                    <td>$70</td>
-                  </tr>
-                  <tr>
-                    <td><a href="./venta-compra.php">012</a></td>
-                    <td><a href="./usuario.php">070</a></td>
-                    <td><a href="./venta-compra.php">Ver Descripcion</a></td>
-                    <td>$270</td>
-                  </tr>
-                  </tbody>
-                  <!-- Contenido Ventas END -->
-
-                </table>
-
-              </div>
-              <!-- Card Body END -->
-
-            </div>
-            <!-- Card END -->
-
-          </div>
-          <!-- Tabla Ventas END -->
-
-          <!-- Tabla Cupones START -->
-          <div class="col-12">
-
-            <!-- Card START -->
-            <div class="card">
-              
-              <!-- Card Header START -->
-              <div class="card-header">
-                <h3 class="card-title">Cupones</h3>
-              </div>
-              <!-- Card Header END -->
-
-              <!-- Card Body START -->
-              <div class="card-body">
-
-                <table id="example4" class="table table-bordered table-hover">
-                  
-                  <!-- Cabecera Tabla Ventas START -->
+                  <!-- Cabecera Tabla Cupon START -->
                   <thead>
                   <tr>
                     <th>ID-Cupon</th>
-                    <th>Nombre</th>
+                    <th>Cupon</th>
                     <th>Porcentaje Descuento</th>
                     <th>Estado</th>
-                    <th>Duracion de Cupon</th>
+                    <th>Fecha Inicio</th>
+                    <th>Fecha Fin</th>
                   </tr>
                   </thead>
-                  <!-- Cabecera Tabla Ventas END -->
-
-                  <!-- Contenido Ventas START -->
+                  <!-- Cabecera Tabla Cupon END -->
+                  
+                  <!-- Contenido Tabla Cupon START -->
                   <tbody>
-                  <?php
-                  require_once("../php/tablaCupones.php");
-                  ?>
+                  <tr>
+                    <td><?php echo $idCupon;?></td>
+                    <td><?php echo $nombreCupon;?></td>
+                    <td><?php echo $porcentajeDescuento;?>%</td>
+                    <td><?php if($estadoCupon==1){echo "Activo";}else{echo "Incactivo";}?></td>
+                    <td>|<?php echo $inicioCupon;?>|</td>
+                    <td>|<?php echo $finCupon;?>|</td>
+                  </tr>
                   </tbody>
-                  <!-- Contenido Ventas END -->
+                  <!-- Cabecera Tabla Cupon END -->
 
                 </table>
-
               </div>
               <!-- Card Body END -->
 
             </div>
-            <!-- Card END -->
-
           </div>
-          <!-- Tabla Cupones END -->
+          <!-- Tabla Cupon END -->
 
         </div>
-        <!--Tablas END-->
+        <!-- Tablas Cupon END -->
 
         <!--Subtitulo START-->
         <div class="row mb-4">
-          <div class="col-6">
-            <h2 class="m-0 text-dark">Acciones Tienda</h2>
+          <div class="col-12">
+            <h2 class="m-0 text-dark">Usuarios o Productos que poseen este cupon</h2>
           </div>
         </div>
         <!--Subtitulo END-->
 
-        <!-- Formularios START -->
+        <!-- Equipos START -->
         <div class="row">
-          
-          <!-- Crear Producto y Cupon START -->
+
+          <!-- Mensaje si no se asigno a nadie el cupon START -->
+          <div class="col-12 mb-4">
+            <h2 class="text-center">Ningun usuario y ningun producto poseen este cupon</h2>
+          </div>
+          <!-- Mensaje si no se asigno a nadie el cupon END -->
+
+          <!-- Usuarios START -->
+          <div class="col-6">
+            <div class="card">
+
+              <!-- Card Header START -->
+              <div class="card-header">
+                <h3 class="card-title">Usuarios que poseen el cupon</h3>
+              </div>
+              <!-- Card Header END -->
+              
+              <!-- Card Body START -->
+              <div class="card-body p-0">
+                <table class="table table-striped">
+                  
+                  <!-- Cabecera Tabla Usuarios START -->
+                  <thead>
+                  <tr>
+                    <th>ID-Usuaio</th>
+                    <th>Nombre Usuario</th>
+                  </tr>
+                  </thead>
+                  <!-- Cabecera Tabla Usuarios END -->
+                  
+                  <!-- Contenido Tabla Usuarios START -->
+                  <tbody>
+                  <tr>
+                    <td><a href="./usuario.php">038</a></td>
+                    <td><a href="./usuario.php">Tornado323</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="./usuario.php">127</a></td>
+                    <td><a href="./usuario.php">xxXBlackGladiatorXxx</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="./usuario.php">320</td>
+                    <td><a href="./usuario.php">Thor123</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="./usuario.php">415</a></td>
+                    <td><a href="./usuario.php">Zeus2mil</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="./usuario.php">369</a></td>
+                    <td><a href="./usuario.php">BunnyFire</a></td>
+                  </tr>
+                  </tbody>
+                  <!-- Cabecera Tabla Usuarios END -->
+
+                </table>
+              </div>
+              <!-- Card Body END -->
+
+            </div>
+          </div>
+          <!-- Usuarios END -->
+
+          <!-- Productos START -->
+          <div class="col-6">
+            <div class="card">
+
+              <!-- Card Header START -->
+              <div class="card-header">
+                <h3 class="card-title">Productos que poseen el cupon</h3>
+              </div>
+              <!-- Card Header END -->
+              
+              <!-- Card Body START -->
+              <div class="card-body p-0">
+                <table class="table table-striped">
+                  
+                  <!-- Cabecera Tabla Productos START -->
+                  <thead>
+                  <tr>
+                    <th>ID-Producto</th>
+                    <th>Nombre Producto</th>
+                  </tr>
+                  </thead>
+                  <!-- Cabecera Tabla Productos END -->
+                  
+                  <!-- Contenido Tabla Productos START -->
+                  <tbody>
+                  <tr>
+                    <td><a href="./producto.php">038</a></td>
+                    <td><a href="./producto.php">Taza de LOL</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="./producto.php">127</a></td>
+                    <td><a href="./producto.php">Gorra Fortnite</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="./producto.php">320</td>
+                    <td><a href="./producto.php">Remera CS:GO</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="./producto.php">415</a></td>
+                    <td><a href="./producto.php">Llavero Free Fire</a></td>
+                  </tr>
+                  </tbody>
+                  <!-- Cabecera Tabla Productos END -->
+
+                </table>
+              </div>
+              <!-- Card Body END -->
+
+            </div>
+          </div>
+          <!-- Productos END -->
+
+        </div>
+        <!-- Equipos END -->
+        
+        <!--Subtitulo START-->
+        <div class="row mb-4">
+          <div class="col-6">
+            <h2 class="m-0 text-dark">Acciones Cupon <?php echo $nombreCupon;?></h2>
+          </div>
+        </div>
+        <!--Subtitulo END-->
+        
+        <!-- Acciones Cupon START -->
+        <div class="row">
+
+          <!-- Modificar Cupon START -->
           <div class="col-md-12">
 
             <!-- Card START -->
@@ -345,95 +356,25 @@
 
               <!-- Titulo Form START -->
               <div class="card-header">
-                <h3 class="card-title">Crear Producto</h3>
+                <h3 class="card-title">Modificar Cupon <?php echo $nombreCupon;?></h3>
               </div>
               <!-- Titulo Form END -->
               
               <!-- Form START -->
-              <form role="form" action="../php/crearProducto.php" method="POST" enctype="multipart/form-data">
-                <div class="row card-body">
-                  
-                  <!-- Input Nombre Producto START -->
-                  <div class="form-group col-6">
-                    <label for="nombreProducto">Nombre Producto</label>
-                    <input type="text" class="form-control" name="nombreProducto" id="nombreProducto" placeholder="Nombre Producto..." required>
-                  </div>
-                  <!-- Input Nombre Producto END -->
-
-                  <!-- Input Precio Producto START -->
-                  <div class="form-group col-6">
-                    <label for="precioProducto">Precio Producto</label>
-                    <input type="text" class="form-control" name="precioProducto" id="precioProducto" placeholder="Precio Producto..." required>
-                  </div>
-                  <!-- Input Precio Producto END -->
-
-                  <!-- Input Stock Producto START -->
-                  <div class="form-group col-6">
-                    <label for="stockProducto">Stock</label>
-                    <input type="number" class="form-control" name="stockProducto" id="stockProducto" placeholder="Stock del Producto..." required>
-                  </div>
-                  <!-- Input Stock Producto END -->
-
-                  <!-- Input Imgaen Producto START -->
-                  <div class="form-group col-6">
-                    <label for="foto">Agregar imagen</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" name="foto" id="foto" required>
-                        <label class="custom-file-label" for="foto">Elija la imagen</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text" id="">Subir</span>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Input Imgaen Producto END -->
-
-                  <!-- Input Descripcion Producto START -->
-                  <div class="form-group col-6">
-                    <label for="descrpcionProducto">Descripcion Producto</label>
-                    <textarea class="form-control" name="descripcionProducto" id="descrpcionProducto" rows="3" placeholder="Descripcion Producto ..." required></textarea>
-                  </div>
-                  <!-- Input Descripcion Producto END -->
-
-                </div>
-
-                <!-- Submit Producto START-->
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Crear Producto</button>
-                </div>
-                <!-- Submit Producto END-->
-
-              </form>
-              <!-- Form END -->
-
-            </div>
-            <!-- Card END -->
-
-            <!-- Card START -->
-            <div class="card card-primary">
-
-              <!-- Titulo Form START -->
-              <div class="card-header">
-                <h3 class="card-title">Crear Cupon</h3>
-              </div>
-              <!-- Titulo Form END -->
-              
-              <!-- Form START -->
-              <form role="form" action="../php/crearCupon.php" method="POST" enctype="multipart/form-data">
+              <form role="form" action="../php/modificarCupon.php" method="POST" enctype="multipart/form-data">
                 <div class="row card-body">
                   
                   <!-- Input Nombre Cupon START -->
                   <div class="form-group col-6">
                     <label for="nombreCupon">Nombre Cupon</label>
-                    <input type="text" class="form-control" name="nombreCupon" id="nombreProducto" placeholder="" required>
+                    <input type="text" class="form-control" name="nombreCupon" id="nombreProducto" placeholder="<?php echo $nombreCupon;?>">
                   </div>
                   <!-- Input Nombre Cupon END -->
 
                   <!-- Input Porcentaje Descuento Cupon START -->
                   <div class="form-group col-6">
                     <label for="porcentajeDescuento">Porcentaje de descuento</label>
-                    <input type="text" class="form-control" name="porcentajeDescuento" id="porcentajeDescuento" placeholder="" required>
+                    <input type="text" class="form-control" name="porcentajeDescuento" id="porcentajeDescuento" placeholder="<?php echo $porcentajeDescuento;?>">
                   </div>
                   <!-- Input Porcentaje Descuento Cupono END -->
 
@@ -444,7 +385,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text"><i class="far fa-clock"></i></span>
                       </div>
-                      <input type="text" class="form-control float-right" id="reservationtime" name="fechaCupon">
+                      <input type="text" class="form-control float-right" id="reservationtime" name="fechaCupon" value="">
                     </div>
                   </div>
                   <!-- Input Fechas END -->
@@ -453,7 +394,7 @@
 
                 <!-- Submit Cupon START-->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Crear Cupon</button>
+                  <button type="submit" class="btn btn-primary">Modificar Cupon</button>
                 </div>
                 <!-- Submit Cupon END-->
 
@@ -465,16 +406,74 @@
 
 
           </div>
-          <!-- Crear Producto END -->
+          <!-- Modificar Cupon END -->
+
+          <!-- Eliminar Cupon START -->
+          <div class="col-6">
+            <div class="card card-danger">
+              
+              <!-- Card Header START -->
+              <div class="card-header">
+                <h3 class="card-title">Eliminar Cupon</h3>
+              </div>
+              <!-- Card Header END -->
+
+              <p class="m-2 text-dark">Ingrese su cuenta para eliminar el Cupon</p>
+
+              <!-- Form START -->
+              <form class="form-horizontal" method="POST" action="../php/eliminarCupon.php?id=<?php echo $idCupon;?>">
+
+                <!-- Card Body START -->
+                <div class="card-body">
+
+                  <!-- Input ID-Cupon START -->
+                  <div class="form-group row">
+                    <label for="idCupon" class="col-4">ID-Cupon</label>
+                    <div class="col-8">
+                      <input type="text" class="form-control" id="idCupon" name="idCupon" disabled value="<?php echo $idCupon;?>">
+                    </div>
+                  </div>
+                  <!-- Input ID-Cupon END -->
+
+                  <!-- Input Usuario START -->
+                  <div class="form-group row">
+                    <label for="usuario" class="col-4">Cuenta</label>
+                    <div class="col-8">
+                      <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Cuenta">
+                    </div>
+                  </div>
+                  <!-- Input Usuario END -->
+
+                  <!-- Input Contraseña START -->
+                  <div class="form-group row">
+                    <label for="password" class="col-4">Contraseña</label>
+                    <div class="col-8">
+                      <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
+                    </div>
+                  </div>
+                  <!-- Input Contraseña END -->
+
+                </div>
+                <!-- Card Body END -->
+
+                <!-- Submit START -->
+                <div class="card-footer d-flex justify-content-center">
+                  <button type="submit" class="btn btn-danger">Eliminar Cupon</button>
+                </div>
+                <!-- Submit END -->
+
+              </form>
+              <!-- Form END -->
+            </div>
+          </div>
+          <!-- Eliminar Cupon END -->
 
         </div>
-        <!-- Formularios END -->
+        <!-- Acciones Cupon END -->
 
       </div>
-      <!--Fluid END-->
-
     </section>
-    <!--Content END-->
+    <!-- Contento END -->
 
   </div>
   <!-- Content Wrapper. Contains page content END-->
@@ -488,7 +487,9 @@
 </div>
 <!-- Wrapper END -->
 
-<!-- SCRIPTS -->
+
+
+<!--SCRIPTS-->
 <!-- jQuery -->
 <script src="../plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
@@ -500,7 +501,7 @@
 <!-- Bootstrap 4 -->
 <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- DataTables -->
-<script src="../plugins/datatables/jquery.dataTables.js"></script>
+<script src="../plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
@@ -561,24 +562,6 @@
       "autoWidth": false,
       "responsive": true,
     });
-    $('#example3').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
-    $('#example4').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
   });
   $(function () {
     //Initialize Select2 Elements
@@ -592,7 +575,7 @@
     //Datemask dd/mm/yyyy
     $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
     //Datemask2 mm/dd/yyyy
-    $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+    $('#datemask2').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
     //Money Euro
     $('[data-mask]').inputmask()
 
@@ -607,7 +590,7 @@
       timePicker: true,
       timePickerIncrement: 30,
       locale: {
-        format: 'YYYY/MM/DD HH:mm:ss ' //'MM/DD/YYYY hh:mm A'
+        format: 'YYYY/MM/DD HH:mm:ss'
       }
     })
     //Date range as a button
