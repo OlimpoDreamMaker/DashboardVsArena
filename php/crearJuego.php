@@ -21,5 +21,6 @@
   
   $desconectar = desconectarBD($conexion);
   header("Location:../templates/juegos.php");
+  //Mostrar Alerta de Juego creado
   
 ?>

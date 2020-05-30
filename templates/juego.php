@@ -1,3 +1,17 @@
+<?php
+require_once("../php/conexionBD.php");
+$conexion = conectar();
+$idJuego = $_GET['id'];
+$consulta = "SELECT * FROM juegos WHERE idJuego='$idJuego'";
+$resultado = mysqli_query($conexion, $consulta);
+$juego = mysqli_fetch_assoc($resultado);
+$nombreJuego = $juego['juego'];
+$descripcionJuego = $juego['descripcionJuego'];
+$imgJuego = $juego['imgJuego'];
+$plataforma = $juego['plataforma'];
+
+desconectarBD($conexion);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -56,7 +70,7 @@
 
           <!-- Titulo Page START -->
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Juego - {Nombre de Juego}</h1>
+            <h1 class="m-0 text-dark">Juego - <?php echo $nombreJuego;?></h1>
           </div>
           <!-- Titulo Page END -->
 
@@ -65,7 +79,7 @@
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="./usuarios.php">Dashboard | VsArena</a></li>
               <li class="breadcrumb-item"><a href="./juegos.php">Juegos</a></li>
-              <li class="breadcrumb-item active">{Juego}</li>
+              <li class="breadcrumb-item active"><?php echo $nombreJuego;?></li>
             </ol>
           </div>
           <!-- Navegacion Pages END -->
@@ -84,7 +98,7 @@
         <!--Subtitulo START-->
         <div class="row mb-4">
           <div class="col-6">
-            <h2 class="m-0 text-dark">Informacion {Nombre de Juego}</h2>
+            <h2 class="m-0 text-dark">Informacion <?php echo $nombreJuego;?></h2>
           </div>
         </div>
         <!--Subtitulo END-->
@@ -93,7 +107,7 @@
         <div class="row">
 
           <!-- Box 1 START -->
-          <div class="col-lg-3 col-6">
+          <!--div class="col-lg-3 col-6">
             <div class="small-box bg-primary">
               <div class="inner">
                 <h3>30</h3>
@@ -103,7 +117,7 @@
                 <i class="fas fa-trophy"></i>
               </div>
             </div>
-          </div>
+          </div-->
           <!-- Box 1 END -->
 
         </div>
@@ -121,7 +135,7 @@
 
               <!-- Imagen Juego START -->
               <div class="col-12">
-                <img src="../dist/img/default.png" class="product-image" alt="Product Image">
+                <img src="<?php echo "../../imgJuegos/$imgJuego";?>" class="product-image" alt="Product Image">
               </div>
               <!-- Imagen Juego END -->
 
@@ -129,8 +143,8 @@
 
             <!-- Resumen Juego START -->
             <div class="col-12 col-sm-6">
-              <h3 class="my-3">{Nombre Juego}</h3>
-              <p>{Descripcion Juego}</p>
+              <h3 class="my-3"><?php echo $nombreJuego;?></h3>
+              <p><?php echo $descripcionJuego;?></p>
 
               <hr>
 
@@ -150,7 +164,7 @@
         <!--Subtitulo START-->
         <div class="row mb-4">
           <div class="col-6">
-            <h2 class="m-0 text-dark">Acciones Juego - LOL</h2>
+            <h2 class="m-0 text-dark">Acciones Juego - <?php echo $nombreJuego;?></h2>
           </div>
         </div>
         <!--Subtitulo END-->
@@ -163,43 +177,43 @@
 
               <!-- Card Header START -->
               <div class="card-header">
-                <h3 class="card-title">Modificar - {Nombre de Juego}</h3>
+                <h3 class="card-title">Modificar - <?php echo $nombreJuego;?></h3>
               </div>
               <!-- Card Header END -->
               
               <!-- Form START -->
-              <form role="form">
+              <form role="form" action="../modificarJuego.php?id=<?php echo $idJuego;?>" method="POST">
 
                 <!-- Card Body START -->
                 <div class="row card-body">
 
                   <!-- Input Nombre Juego START -->
                   <div class="form-group col-6">
-                    <label for="exampleInputEmail1">Nombre Juego</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre Juego...">
+                    <label for="juego">Nombre Juego</label>
+                    <input type="text" class="form-control" id="juego" name="juego" placeholder="<?php echo $nombreJuego;?>">
                   </div>
                   <!-- Input Nombre Juego END -->
 
                   <!-- Input Plataforma START -->
                   <div class="form-group col-6">
                     <label>Plataforma</label>
-                    <select class="form-control">
-                      <option>PC</option>
-                      <option>PS3/4</option>
-                      <option>XBOX</option>
-                      <option>MOBILE</option>
-                      <option>TODAS LAS PLATAFORMAS</option>
+                    <select class="form-control" name="plataforma">
+                      <option value="PC"<?php if($plataforma=="PC"){echo "selected";}?>>PC</option>
+                      <option value="PS3/4"<?php if($plataforma=="PS3/4"){echo "selected";}?>>PS3/4</option>
+                      <option value="XBOX"<?php if($plataforma=="XBOX"){echo "selected";}?>>XBOX</option>
+                      <option value="MOBILE"<?php if($plataforma=="MOBILE"){echo "selected";}?>>MOBILE</option>
+                      <option value="Multi Plataforma"<?php if($plataforma=="Multi Plataforma"){echo "selected";}?>>Multi Plataforma</option>
                     </select>
                   </div>
                   <!-- Input Plataforma END -->
 
                   <!-- Input Portada Juego START -->
                   <div class="form-group col-6">
-                    <label for="exampleInputFile">Cambiar Portada</label>
+                    <label for="exampleInputFile">Subir Portada</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Elija el archivo</label>
+                        <input type="file" class="custom-file-input" name="foto" id="foto">
+                        <label class="custom-file-label" for="foto">Elija el archivo</label>
                       </div>
                       <div class="input-group-append">
                         <span class="input-group-text" id="">Subir</span>
@@ -211,7 +225,7 @@
                   <!-- Input Detalles Juego START -->
                   <div class="form-group col-6">
                     <label>Detalles Juego</label>
-                    <textarea class="form-control" rows="3" placeholder="Detalles Juego..."></textarea>
+                    <textarea class="form-control" rows="3" id="descripcionJuego" name="descripcionJuego" placeholder="<?php echo $descripcionJuego;?>"></textarea>
                   </div>
                   <!-- Input Detalles Juego END -->
 
@@ -242,29 +256,38 @@
               <!-- Card Header END -->
 
               <!-- Subtitulo START -->
-              <p class="m-2 text-dark">Ingrese su cuenta para eliminar el torneo</p>
+              <p class="m-2 text-dark">Ingrese su cuenta para eliminar el juego</p>
               <!-- Subtitulo END -->
 
               <!-- Form START -->
-              <form class="form-horizontal">
+              <form class="form-horizontal" method="POST" action="../php/eliminarJuego.php">
 
                 <!-- Card Body START -->
                 <div class="card-body">
+
+                  <!-- Input ID-Juego START -->
+                  <div class="form-group row">
+                    <label for="idJuego" class="col-4">ID-Juego</label>
+                    <div class="col-8">
+                      <input type="email" class="form-control" id="idJuego" name="idJuego" disabled value="<?php echo $idJuego;?>">
+                    </div>
+                  </div>
+                  <!-- Input ID-Juego END -->
                   
                   <!-- Input Usuario START -->
                   <div class="form-group row">
-                    <label for="inputEmail3" class="col-4">Cuenta</label>
+                    <label for="usuario" class="col-4">Cuenta</label>
                     <div class="col-8">
-                      <input type="email" class="form-control" id="inputEmail3" placeholder="Cuenta">
+                      <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Cuenta">
                     </div>
                   </div>
                   <!-- Input Usuario END -->
 
                   <!-- Input Contraseña START -->
                   <div class="form-group row">
-                    <label for="inputPassword3" class="col-4">Password</label>
+                    <label for="password" class="col-4">Contraseña</label>
                     <div class="col-8">
-                      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                      <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña">
                     </div>
                   </div>
                   <!-- Input Contraseña END -->
