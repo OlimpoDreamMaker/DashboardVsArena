@@ -182,7 +182,7 @@ desconectarBD($conexion);
               <!-- Card Header END -->
               
               <!-- Form START -->
-              <form role="form" action="../modificarJuego.php" method="POST">
+              <form role="form" action="../modificarJuego.php?id=<?php echo $idJuego;?>" method="POST">
 
                 <!-- Card Body START -->
                 <div class="row card-body">
