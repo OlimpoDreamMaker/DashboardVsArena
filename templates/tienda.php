@@ -109,7 +109,13 @@
           <div class="col-lg-3 col-6">
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>65</h3>
+                <?php
+                require_once("../php/conexionBD.php");
+                $conexion = conectar();
+                require_once("../php/cantidadProductos.php");
+                echo "<h3>".cantidadProductos($conexion)."</h3>";
+                desconectarBD($conexion); 
+                ?>
                 <p>Cantidad de Productos</p>
               </div>
               <div class="icon">
@@ -174,32 +180,19 @@
                   <tr>
                     <th>ID-Productos</th>
                     <th>Nombre Producto</th>
-                    <th>Precio</th>
+                    <th>Precio Efectivo</th>
+                    <th>Precio Mon Virtual</th>
                     <th>Stock</th>
+                    <th>Cupon</th>
                   </tr>
                   </thead>
                   <!-- Cabecera Tabla Productos END -->
 
                   <!-- Contenido Productos START -->
                   <tbody>
-                  <tr>
-                    <td><a href="./producto.php">256</a></td>
-                    <td><a href="./producto.php">Tazas LOL</a></td>
-                    <td>$20</td>
-                    <td>17</td>
-                  </tr>
-                  <tr>
-                    <td><a href="./producto.php">125</a></td>
-                    <td><a href="./producto.php">Gorra Fortnite</a></td>
-                    <td>$15</td>
-                    <td>100</td>
-                  </tr>
-                  <tr>
-                    <td><a href="./producto.php">056</a></td>
-                    <td><a href="./producto.php">Campera CS:G0</a></td>
-                    <td>$35</td>
-                    <td>30</td>
-                  </tr>
+                  <?php
+                  require_once("../php/tablaProducto.php");
+                  ?>
                   </tbody>
                   <!-- Contenido Productos END -->
 
@@ -360,19 +353,26 @@
                   </div>
                   <!-- Input Nombre Producto END -->
 
-                  <!-- Input Precio Producto START -->
-                  <div class="form-group col-6">
-                    <label for="precioProducto">Precio Producto</label>
-                    <input type="text" class="form-control" name="precioProducto" id="precioProducto" placeholder="Precio Producto..." required>
-                  </div>
-                  <!-- Input Precio Producto END -->
-
                   <!-- Input Stock Producto START -->
                   <div class="form-group col-6">
                     <label for="stockProducto">Stock</label>
                     <input type="number" class="form-control" name="stockProducto" id="stockProducto" placeholder="Stock del Producto..." required>
                   </div>
                   <!-- Input Stock Producto END -->
+
+                  <!-- Input Precio Producto START -->
+                  <div class="form-group col-6">
+                    <label for="precioProductoEfectivo">Precio Producto Efectivo</label>
+                    <input type="text" class="form-control" name="precioProductoEfectivo" id="precioProductoEfectivo" placeholder="Precio Producto Efectivo..." required>
+                  </div>
+                  <!-- Input Precio Producto END -->
+
+                  <!-- Input Precio Producto START -->
+                  <div class="form-group col-6">
+                    <label for="precioProductoMonVirtual">Precio Producto Moneda Virutal</label>
+                    <input type="text" class="form-control" name="precioProductoMonVirtual" id="precioProductoMonVirtual" placeholder="Precio Producto Mon Virtual..." required>
+                  </div>
+                  <!-- Input Precio Producto END -->
 
                   <!-- Input Imgaen Producto START -->
                   <div class="form-group col-6">
@@ -465,7 +465,7 @@
 
 
           </div>
-          <!-- Crear Producto END -->
+          <!-- Crear Producto yCupon END -->
 
         </div>
         <!-- Formularios END -->

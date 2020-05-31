@@ -1,3 +1,19 @@
+<?php
+require_once("../php/conexionBD.php");
+$conexion = conectar();
+$idProducto = $_GET['id'];
+$consulta = "SELECT * FROM productos WHERE idProducto='$idProducto'";
+$resultado = mysqli_query($conexion, $consulta);
+$producto = mysqli_fetch_assoc($resultado);
+$nombreProducto = $producto['producto'];
+$precioEfectivo = $producto['precioEfectivo'];
+$precioMonVirtual = $producto['precioMonVirtual'];
+$stock = $producto['stock'];
+$descripcion = $producto['descripcion'];
+$imgProducto = $producto['imgProducto'];
+
+desconectarBD($conexion);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -65,7 +81,7 @@
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="./usuarios.php">Dashboard | VsArena</a></li>
               <li class="breadcrumb-item"><a href="./tienda.php">Tienda</a></li>
-              <li class="breadcrumb-item active">{Producto}</li>
+              <li class="breadcrumb-item active"><?php echo $nombreProducto;?></li>
             </ol>
           </div>
           <!-- Navegacion Pages END -->
@@ -84,7 +100,7 @@
         <!--Subtitulo START-->
         <div class="row mb-4">
           <div class="col-6">
-            <h2 class="m-0 text-dark">Informacion {Nombre Producto}</h2>
+            <h2 class="m-0 text-dark">Informacion <?php echo $nombreProducto;?></h2>
           </div>
         </div>
         <!--Subtitulo END-->
@@ -93,7 +109,7 @@
         <div class="row">
 
           <!-- Box 1 START -->
-          <div class="col-lg-3 col-6">
+          <!--div class="col-lg-3 col-6">
             <div class="small-box bg-primary">
               <div class="inner">
                 <h3>30</h3>
@@ -103,7 +119,7 @@
                 <i class="fas fa-trophy"></i>
               </div>
             </div>
-          </div>
+          </div-->
           <!-- Box 1 END -->
 
         </div>       
@@ -121,29 +137,33 @@
             <!-- Imagen Producto START -->
             <div class="col-12 col-sm-6">
               <div class="col-12">
-                <img src="../dist/img/default.png" class="product-image" alt="Product Image">
+                <img src="../../imgProductos/<?php echo $imgProducto;?>" class="product-image" alt="Product Image">
               </div>
             </div>
             <!-- Imagen Producto END -->
 
             <!-- Info Producto START -->
             <div class="col-12 col-sm-6">
-              <h3 class="my-3">{Nombre Producto}</h3>
+              <h3 class="my-3"><?php echo $nombreProducto;?></h3>
               <p>
-                {Descripcion Porudcto}: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil doloremque aut laborum asperiores ipsam expedita voluptatem! Blanditiis asperiores architecto saepe similique. Veniam pariatur nulla facilis atque officia, error iste.<br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis sunt deleniti adipisci ad officiis, quod tempora harum nulla. Iste nesciunt asperiores porro harum earum ullam, necessitatibus ducimus autem doloribus quod.
+                <?php echo $descripcion;?>
               </p>
 
               <hr>
               <div class="bg-gray py-2 px-3 mt-4">
                 <h2 class="mb-0">
-                  ${Precio Producto}
+                  Precio Efectivo: $<?php echo $precioEfectivo;?>
+                </h2>
+              </div>
+              <div class="bg-gray py-2 px-3 mt-4">
+                <h2 class="mb-0">
+                  Precio Mon Virtual: <?php echo $precioMonVirtual;?>
                 </h2>
               </div>
               <div class="mt-4">
                 <div class="btn btn-default btn-lg btn-flat">
                   <i class="fas fa-boxes fa-lg mr-2"></i> 
-                  Stock:{stock producto}
+                  Stock: <?php echo $stock;?>
                 </div>
 
               </div>
@@ -162,8 +182,8 @@
         
         <!--Subtitulo START-->
         <div class="row mb-4">
-          <div class="col-6">
-            <h2 class="m-0 text-dark">Acciones Producto - {Nombre Producto}</h2>
+          <div class="col-12">
+            <h2 class="m-0 text-dark">Acciones Producto - <?php echo $nombreProducto;?></h2>
           </div>
         </div>
         <!--Subtitulo END-->
@@ -178,56 +198,63 @@
 
               <!-- Card Header START -->
               <div class="card-header">
-                <h3 class="card-title">Modificar - {Nombre Producto}</h3>
+                <h3 class="card-title">Modificar - <?php echo $nombreProducto;?></h3>
               </div>
               <!-- Card Header START -->
 
               <!-- Form START -->
-              <form role="form">
+              <form role="form" action="../php/modificarProducto.php?id=<?php ?>" method="POST" enctype="multipart/form-data">
 
                 <!-- Card Body START -->
                 <div class="row card-body">
 
                   <!-- Input Nombre Producto START -->
                   <div class="form-group col-6">
-                    <label for="exampleInputEmail1">Nombre Producto</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre Torneo...">
+                    <label for="nombreProducto">Nombre Producto</label>
+                    <input type="text" class="form-control" name="nombreProducto" id="nombreProducto" placeholder="<?php echo $nombreProducto;?>" required>
                   </div>
                   <!-- Input Nombre Producto END -->
 
-                  <!-- Input Precio Producto START -->
+                  <!-- Input Stock Producto START -->
                   <div class="form-group col-6">
-                    <label for="exampleInputPassword1">Precio Producto</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Juego...">
+                    <label for="stockProducto">Stock</label>
+                    <input type="number" class="form-control" name="stockProducto" id="stockProducto" placeholder="<?php echo $stock;?>" required>
                   </div>
-                  <!-- Input Precio Producto END -->
+                  <!-- Input Stock Producto END -->
 
-                  <!-- Input STOCK Producto START -->
+                  <!-- Input Precio Producto Efectivo START -->
                   <div class="form-group col-6">
-                    <label for="exampleInputPassword1">Stock</label>
-                    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Cantidad de Participantes...">
+                    <label for="precioProductoEfectivo">Precio Producto Efectivo</label>
+                    <input type="text" class="form-control" name="precioProductoEfectivo" id="precioProductoEfectivo" placeholder="<?php echo $precioEfectivo;?>" required>
                   </div>
-                  <!-- Input STOCK Producto END -->
+                  <!-- Input Precio Producto Efectivo END -->
 
-                  <!-- Input Imagen Producto START -->
+                  <!-- Input Precio Producto MonVirtual START -->
                   <div class="form-group col-6">
-                    <label for="exampleInputFile">Agregar imagen</label>
+                    <label for="precioProductoMonVirtual">Precio Producto Moneda Virutal</label>
+                    <input type="text" class="form-control" name="precioProductoMonVirtual" id="precioProductoMonVirtual" placeholder="<?php echo $precioMonVirtual;?>" required>
+                  </div>
+                  <!-- Input Precio Producto MonVirtual END -->
+
+                  <!-- Input Imgaen Producto START -->
+                  <div class="form-group col-6">
+                    <label for="foto">Agregar imagen</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Elija el archivo</label>
+                        <input type="file" class="custom-file-input" name="foto" id="foto" required>
+                        <label class="custom-file-label" for="foto">Elija la imagen</label>
                       </div>
                       <div class="input-group-append">
                         <span class="input-group-text" id="">Subir</span>
                       </div>
                     </div>
                   </div>
-                  <!-- Input Imagen Producto END -->
+                  <!-- Input Imgaen Producto END -->
 
                   <!-- Input Descripcion Producto START -->
                   <div class="form-group col-6">
-                    <label>Descripcion Producto</label>
-                    <textarea class="form-control" rows="3" placeholder="Escriba ..."></textarea>
+                    <label for="descrpcionProducto">Descripcion Producto</label>
+                    <textarea class="form-control" name="descripcionProducto" id="descrpcionProducto" rows="3" placeholder="<?php echo $descripcion;?>" required></textarea>
                   </div>
                   <!-- Input Descripcion Producto END -->
 
@@ -263,24 +290,24 @@
               <!-- Subtitulo END -->
 
               <!-- FORM START -->
-              <form class="form-horizontal">
+              <form class="form-horizontal" action= "../php/eliminarProducto.php?id=<?php echo $idProducto;?>">
 
                 <!-- Card Body START -->
                 <div class="card-body">
                   <!-- Input Usuario START -->
                   <div class="form-group row">
-                    <label for="inputEmail3" class="col-4">Cuenta</label>
+                    <label for="usuario" class="col-4">Cuenta</label>
                     <div class="col-8">
-                      <input type="email" class="form-control" id="inputEmail3" placeholder="Cuenta">
+                      <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Cuenta">
                     </div>
                   </div>
                   <!-- Input Usuario END -->
 
                   <!-- Input Contraseña START -->
                   <div class="form-group row">
-                    <label for="inputPassword3" class="col-4">Contraseña</label>
+                    <label for="password" class="col-4">Contraseña</label>
                     <div class="col-8">
-                      <input type="password" class="form-control" id="inputPassword3" placeholder="Contraseña">
+                      <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña">
                     </div>
                   </div>
                   <!-- Input Contraseña END -->
